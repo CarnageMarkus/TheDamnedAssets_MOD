@@ -1,0 +1,29 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Last Changes:
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Model ("ALTAR_CRYSTALBLUE2")
+{
+
+	meshAndTree ("ALTAR_CRYSTALBLUE2.asc")
+	aniEnum
+	{
+			ani			("s_S0"			1	"s_S0"	0.0	0.0	M.	"ALTAR_CRYSTALBLUE2_ANI.asc"	F	0	0)
+			ani			("t_S0_2_S1"	1	"s_S1"	0.0	0.0	M.	"ALTAR_CRYSTALBLUE2_ANI.asc"	F	0	1)
+			{
+				*eventPFX	(1	1	"ZGROUNDFOG"	"BIP01 EFFECT"	ATTACH)
+			}
+			ani			("s_S1"			1	"s_S1"	0.0	0.0	M.	"ALTAR_CRYSTALBLUE2_ANI.asc"	F	1	1)
+			{
+				//*eventSFX	(45	"Forge_Fire"	EMPTY_SLOT	)
+			}
+			ani			("t_S1_2_S0"	1	"s_S0"	0.0	0.0	M.	"ALTAR_CRYSTALBLUE2_ANI.asc"	R	0	1)
+			{
+				*eventPFXStop	(1	1)
+			}
+	}
+}

@@ -1,0 +1,33 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Last Changes:
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Model ("ALTAR_PSI2")
+{
+
+	meshAndTree ("ALTAR_PSI2.asc")
+	aniEnum
+	{
+			ani			("s_S0"			1	"s_S0"	0.0	0.0	M.	"ALTAR_PSI2_ANI.asc"	F	0	0)
+			ani			("t_S0_2_S1"	1	"s_S1"	0.0	0.0	M.	"ALTAR_PSI2_ANI.asc"	F	0	1)
+			{
+				*eventPFX	(1	1	"ZGROUNDFOG"	"BIP01"	ATTACH)
+				*eventPFX	(1	2	"FIRE_SMOKE"	"BIP01 R FIRE"	ATTACH)
+				*eventPFX	(1	3	"FIRE_SMOKE"	"BIP01 L FIRE"	ATTACH)
+			}
+			ani			("s_S1"			1	"s_S1"	0.0	0.0	M.	"ALTAR_PSI2_ANI.asc"	F	1	1)
+			{
+				//*eventSFX	(45	"Forge_Fire"	EMPTY_SLOT	)
+			}
+			ani			("t_S1_2_S0"	1	"s_S0"	0.0	0.0	M.	"ALTAR_PSI2_ANI.asc"	R	0	1)
+			{
+				*eventPFXStop	(1	1)
+				*eventPFXStop	(1	2)
+				*eventPFXStop	(1	3)
+			}
+	}
+}
