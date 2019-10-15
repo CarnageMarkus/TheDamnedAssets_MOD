@@ -2,49 +2,45 @@
 // audio options menu
 // *********************************************************************
 
-INSTANCE MENU_OPT_AUDIO(C_MENU_DEF) 
+INSTANCE MENU_OPT_AUDIO(C_MENU_WITH_FAKE_PANEL) 
 {
-	backpic			= MENU_BACK_PIC;
-	
-	items[0]		= "MENUITEM_AUDIO_HEADLINE";
+	items[10]	= "MENUITEM_PANEL3";
+	items[12]		= "MENUITEM_AUDIO_HEADLINE";
 		
-	items[1]		= "MENUITEM_AUDIO_SFXVOL";
-	items[2]		= "MENUITEM_AUDIO_SFXVOL_SLIDER";
+	items[13]		= "MENUITEM_AUDIO_SFXVOL";
+	items[14]		= "MENUITEM_AUDIO_SFXVOL_SLIDER";
 		
-	items[3]		= "MENUITEM_AUDIO_MUSICVOL";
-	items[4]		= "MENUITEM_AUDIO_MUSICVOL_SLIDER";
+	items[15]		= "MENUITEM_AUDIO_MUSICVOL";
+	items[16]		= "MENUITEM_AUDIO_MUSICVOL_SLIDER";
 	
-	items[5]		= "MENUITEM_AUDIO_MUSIC";
-	items[6]		= "MENUITEM_AUDIO_MUSIC_CHOICE";
+	items[17]		= "MENUITEM_AUDIO_MUSIC";
+	items[18]		= "MENUITEM_AUDIO_MUSIC_CHOICE";
 
-	items[7]		= "MENUITEM_AUDIO_PROVIDER";
-	items[8]		= "MENUITEM_AUDIO_PROVIDER_CHOICE";
+	items[19]		= "MENUITEM_AUDIO_PROVIDER";
+	items[20]		= "MENUITEM_AUDIO_PROVIDER_CHOICE";
 
-	items[9]		= "MENUITEM_AUDIO_SPEEKER";
-	items[10]		= "MENUITEM_AUDIO_SPEEKER_CHOICE";
+	items[21]		= "MENUITEM_AUDIO_SPEEKER";
+	items[22]		= "MENUITEM_AUDIO_SPEEKER_CHOICE";
 
-	items[11]		= "MENUITEM_AUDIO_REVERB";
-	items[12]		= "MENUITEM_AUDIO_REVERB_CHOICE";
+	items[23]		= "MENUITEM_AUDIO_REVERB";
+	items[24]		= "MENUITEM_AUDIO_REVERB_CHOICE";
 
-	items[13]		= "MENUITEM_AUDIO_SAMPLERATE";
-	items[14]		= "MENUITEM_AUDIO_SAMPLERATE_CHOICE";
+	items[25]		= "MENUITEM_AUDIO_SAMPLERATE";
+	items[26]		= "MENUITEM_AUDIO_SAMPLERATE_CHOICE";
 	
-	items[15]		= "MENUITEM_AUDIO_BACK";
+	items[27]		= "MENUITEM_AUDIO_BACK";
 	
 	flags = flags | MENU_SHOW_INFO;
 };
 
-const int MENU_SOUND_DY = 550;
 
-
-INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF) 
+INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_PANEL3_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "SOUND SETTINGS";
+	text[0]		= "USTAWIENIA DèWI KU";
 	type		= MENU_ITEM_TEXT;
 	// Position und Dimension	
-	posx		= 0;		posy		= MENU_TITLE_Y;
-	dimx		= 8100;
+	posy		= MENU_TITLE_Y;
 	// Weitere Eigenschaften
 	flags		= flags & ~IT_SELECTABLE;
 	flags		= flags | IT_TXT_CENTER;
@@ -55,15 +51,14 @@ INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF)
 // Sound-Volume
 //
 
-INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Effects&Language";
-	text[1]		= "Volume of sound effects and language."; // Kommentar
+	text[0]		= "Efekty i mowa";
+	text[1]		= "G≥oúnoúÊ efektÛw düwiÍkowych i mowy."; // Kommentar
 	
 	// Position und Dimension	
-	posx		= 1000;		posy		= MENU_START_Y + MENU_SOUND_DY*0;
-	dimx		= 3400;		dimy		= 750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*0;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften		
@@ -71,13 +66,12 @@ INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_DEF)
 };
 
 
-INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_PANEL3_SLIDER_DEF)
 {	
 	backPic		= MENU_SLIDER_BACK_PIC;
 	type		= MENU_ITEM_SLIDER;
 	// Position und Dimension	
-	posx		= 4300;		posy		= MENU_START_Y + MENU_SOUND_DY*0;
-	dimx = MENU_SLIDER_DX; dimy	= MENU_SLIDER_DY;	
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*0;
 	// Aktionen
 	onChgSetOption													= "soundVolume";
 	onChgSetOptionSection 											= "SOUND";	
@@ -91,28 +85,26 @@ INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_DEF)
 // Musik-Volume
 //
 
-INSTANCE MENUITEM_AUDIO_MUSICVOL(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_MUSICVOL(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Music Volume";
-	text[1]		= "Volume of background music."; // Kommentar
+	text[0]		= "G≥oúnoúÊ muzyki";
+	text[1]		= "G≥oúnoúÊ muzyki w tle."; // Kommentar
 	
 	// Position und Dimension	
-	posx		= 1000;		posy		=	MENU_START_Y + MENU_SOUND_DY*1;
-	dimx		= 3400;		dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*1;
 	// Aktionen
 	onSelAction[0]  =	SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften
 	flags		=	flags | IT_EFFECTS_NEXT;
 };
 
-INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_PANEL3_SLIDER_DEF)
 {	
 	backPic		= MENU_SLIDER_BACK_PIC;
 	type		= MENU_ITEM_SLIDER;
 	// Position und Dimension	
-	posx		= 4300;		posy		= 	MENU_START_Y + MENU_SOUND_DY*1;
-	dimx = MENU_SLIDER_DX; dimy	= MENU_SLIDER_DY;	
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*1;
 	// Aktionen
 	onChgSetOption													= "musicVolume";
 	onChgSetOptionSection											= "SOUND";	
@@ -127,15 +119,14 @@ INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_DEF)
 // Music on/off
 //
 
-instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Music";
-	text[1]		= "Toggle background music on/off."; // Kommentar
+	text[0]		= "Muzyka";
+	text[1]		= "W≥πcza/wy≥πcza muzykÍ w tle."; // Kommentar
 	
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*2;
-	dimx		=	3000;	dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*2;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;	
 	// Weitere Einstellungen
@@ -143,15 +134,14 @@ instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
 };
 
 
-INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		=   "off|on";
+	text[0]		=   "wy≥.|w≥.";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 4300;		posy		=	MENU_START_Y + MENU_SOUND_DY*2 + MENU_CHOICE_YPLUS;
-	dimx = MENU_SLIDER_DX;dimy = MENU_CHOICE_DY;
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*2;
 	// Aktionen	
 	onChgSetOption													= "musicEnabled";	
 	onChgSetOptionSection 											= "SOUND";		
@@ -170,31 +160,28 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 
 
 
-instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Soundprovider";
-	//text[1]		= "Eine ƒnderung wirkt sich erst beim Neustart aus!"; // Kommentar
-text[1]		= "Restart Gothic to avtivate the new settings."; // Kommentar
+	text[0]		= "èrÛd≥o düwiÍku";
+	text[1]		= "Zmiany uaktywniπ siÍ po ponownym uruchomieniu!"; // Kommentar
 	
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*3;
-	dimx		=	3000;	dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*3;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;	
 	// Weitere Einstellungen
 	flags		= flags | IT_EFFECTS_NEXT;	
 };
 
-instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
 	text[0]		=   "1|2|3|4|5";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 4300;		posy		=	MENU_START_Y + MENU_SOUND_DY*3 + MENU_CHOICE_YPLUS;
-	dimx 		= 3000;		dimy = MENU_CHOICE_DY;
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*3;
 	// Aktionen	
 	onChgSetOption													= "soundProviderIndex";	
 	onChgSetOptionSection 											= "INTERNAL";		
@@ -204,32 +191,28 @@ instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_DEF)
 	flags		= flags | IT_TXT_CENTER | IT_PERF_OPTION | IT_NEEDS_RESTART;	
 };
 
-instance MENUITEM_AUDIO_SPEEKER(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_SPEEKER(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	//text[0]		= "Lautsprecher";
-text[0]		= "Speakers";
+	text[0]		= "G≥oúniki";
 	text[1]		= ""; // Kommentar
 	
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*4;
-	dimx		=	3000;	dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*4;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;	
 	// Weitere Einstellungen
 	flags		= flags | IT_EFFECTS_NEXT;	
 };
 
-instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	//text[0]		=   "2 Lautsprecher|Kopfhˆrer|Surround|4 Lautsprecher";
-text[0]		=   "2 Speakers|Headphones|Surround|4 Speakers";
+	text[0]		=   "2 g≥oúniki|S≥uchawki|Surround|4 g≥oúniki";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 4300;		posy		=	MENU_START_Y + MENU_SOUND_DY*4 + MENU_CHOICE_YPLUS;
-	dimx 		= 3000;		dimy = MENU_CHOICE_DY;
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*4;
 	// Aktionen	
 	onChgSetOption													= "soundSpeakerIndex";
 	onChgSetOptionSection 											= "INTERNAL";		
@@ -238,33 +221,28 @@ text[0]		=   "2 Speakers|Headphones|Surround|4 Speakers";
 	flags		= flags | IT_TXT_CENTER | IT_PERF_OPTION;
 };
 
-instance MENUITEM_AUDIO_REVERB(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_REVERB(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	//text[0]		= "Hall-Effekt";
-	//text[1]		= "Sollen Halleffekte in Hˆhlen aktiviert werden (Neustart erforderlich) ?"; // Kommentar
-text[0]		= "Reverb Effects";
-text[1]		= "Enables reverb effects in caves. (restart required)"; // Kommentar
+	text[0]		= "Pog≥os";
+	text[1]		= "W≥πcza pog≥os w jaskiniach (wymaga ponownego uruchomienia)."; // Kommentar
 	
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*5;
-	dimx		=	3000;	dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*5;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;	
 	// Weitere Einstellungen
 	flags		= flags | IT_EFFECTS_NEXT;	
 };
 
-instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	//text[0]		=   "aus|an";
-text[0]		=   "off|on";
+	text[0]		=   "w≥.|wy≥.";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 4300;		posy		=	MENU_START_Y + MENU_SOUND_DY*5 + MENU_CHOICE_YPLUS;
-	dimx = MENU_CHOICE_DX;dimy = MENU_CHOICE_DY;
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*5;
 	// Aktionen	
 	onChgSetOption												= "soundUseReverb";	
 	onChgSetOptionSection 											= "SOUND";		
@@ -273,32 +251,28 @@ text[0]		=   "off|on";
 	flags		= flags | IT_TXT_CENTER | IT_PERF_OPTION | IT_NEEDS_RESTART;
 };
 
-instance MENUITEM_AUDIO_SAMPLERATE(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_SAMPLERATE(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	//text[0]		= "Sample-Rate";
-	//text[1]		= "Eine ƒnderung wirkt sich erst beim Neustart aus!"; // Kommentar
-text[0]		= "Sample-Rate";
-text[1]		= "Restart Gothic to avtivate the new settings."; // Kommentar
+	text[0]		= "PrÛbkowanie";
+	text[1]		= "Zmiany uaktywniπ siÍ po ponownym uruchomieniu!"; // Kommentar
 	
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*6;
-	dimx		=	3000;	dimy		=	750;
+	posy	 = MENU_START_Y + MENU_PANEL3_STEP*6;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;	
 	// Weitere Einstellungen
 	flags		= flags | IT_EFFECTS_NEXT;	
 };
 
-instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_DEF)
+instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
 	text[0]		=   "22 khz|44 khz";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 4300;		posy		=	MENU_START_Y + MENU_SOUND_DY*6 + MENU_CHOICE_YPLUS;
-	dimx = MENU_CHOICE_DX;dimy = MENU_CHOICE_DY;
+	posy	 += MENU_START_Y + MENU_PANEL3_STEP*6;
 	// Aktionen	
 	onChgSetOption													= "soundSampleRateIndex";	
 	onChgSetOptionSection 											= "INTERNAL";		
@@ -307,13 +281,12 @@ instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_DEF)
 	flags		= flags | IT_TXT_CENTER | IT_PERF_OPTION | IT_NEEDS_RESTART;
 };
 
-INSTANCE MENUITEM_AUDIO_BACK(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_AUDIO_BACK(C_MENU_ITEM_PANEL3_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Back";
+	text[0]		=	"Wstecz";
 	// Position und Dimension	
-	posx		=	1000;		posy		=	MENU_BACK_Y;
-	dimx		=	6192;		dimy		=	MENU_SOUND_DY;
+	posy		=	MENU_BACK_Y;
 	// Aktionen
 	onSelAction[0]	= 	SEL_ACTION_BACK;		
 	
