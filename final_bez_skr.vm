@@ -1,0 +1,13 @@
+[BEGINVDF]
+Comment=
+BaseDir=G:\SteamLibrary\steamapps\common\Gothic
+VDFName=G:\SteamLibrary\steamapps\common\Gothic\Data\ModVDF\TheDamned_outlander.mod
+[FILES]
+_work\DATA\Anims -r
+_work\DATA\Meshes -r
+_work\DATA\Textures\_compiled\*-C.TEX -r
+_work\DATA\WORLDS\NIGHTMARE.ZEN -r
+_work\DATA\WORLDS\WORLD.ZEN -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]
