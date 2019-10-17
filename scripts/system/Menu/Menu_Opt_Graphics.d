@@ -2,37 +2,40 @@
 // game options menu
 // *********************************************************************
 
-INSTANCE MENU_OPT_GRAPHICS(C_MENU_DEF)
+INSTANCE MENU_OPT_GRAPHICS(C_MENU_WITH_FAKE_PANEL) 
 {
-	backpic			= MENU_BACK_PIC;
+	items[10]	= "MENUITEM_PANEL3";
 	
-	items[0]		= "MENUITEM_GRA_HEADLINE";
+	items[11]		= "MENUITEM_GRA_HEADLINE";
 				
-	items[1]		= "MENUITEM_GRA_TEXQUAL";	
-	items[2]		= "MENUITEM_GRA_TEXQUAL_SLIDER";	
+	items[12]		= "MENUITEM_GRA_TEXQUAL";	
+	items[13]		= "MENUITEM_GRA_TEXQUAL_SLIDER";	
 	
-	items[3]		= "MENUITEM_GRA_MODEL_DETAIL";	
-	items[4]		= "MENUITEM_GRA_MODEL_DETAIL_SLIDER";
+	items[14]		= "MENUITEM_GRA_MODEL_DETAIL";	
+	items[15]		= "MENUITEM_GRA_MODEL_DETAIL_SLIDER";
 
-	items[5]		= "MENUITEM_GRA_SIGHT";
-	items[6]		= "MENUITEM_GRA_SIGHT_CHOICE";		
+	items[16]		= "MENUITEM_GRA_SIGHT";
+	items[17]		= "MENUITEM_GRA_SIGHT_CHOICE";		
 		
-	items[7]		= "MENUITEM_GRA_SKY_EFFECTS";
-	items[8]		= "MENUITEM_GRA_SKY_EFFECTS_CHOICE";		
+	items[18]		= "MENUITEM_GRA_SKY_EFFECTS";
+	items[19]		= "MENUITEM_GRA_SKY_EFFECTS_CHOICE";		
 					
-	items[9]		= "MENUITEM_GRA_BACK";	
+	items[20]		= "MENUITEM_GRA_BACK";	
 	
 	flags = flags | MENU_SHOW_INFO;
 };
 
+// C_MENU_ITEM_PANEL3_DEF
+// C_MENU_ITEM_PANEL3_COL1_DEF
+// C_MENU_ITEM_PANEL3_SLIDER_DEF
+// C_MENU_ITEM_PANEL3_CHOICE_DEF
 
-INSTANCE MENUITEM_GRA_HEADLINE(C_MENU_ITEM_DEF) 
+INSTANCE MENUITEM_GRA_HEADLINE(C_MENU_ITEM_PANEL3_DEF) 
 {
-	text[0]		=	"GRAPHIC SETTINGS";
+	text[0]		=	"USTAWIENIA GRAFICZNE";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension	
-	posx		=	0;		posy		=	MENU_TITLE_Y;
-	dimx		=	8100;
+	posy		=	MENU_TITLE_Y;
 	
 	flags		= flags & ~IT_SELECTABLE;
 	flags		= flags | IT_TXT_CENTER;	
@@ -43,27 +46,25 @@ INSTANCE MENUITEM_GRA_HEADLINE(C_MENU_ITEM_DEF)
 // Texture-Quality
 //
 
-INSTANCE MENUITEM_GRA_TEXQUAL(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_TEXQUAL(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Texture Detail";
-	text[1]		= 	"Detail level of textures."; // Kommentar
+	text[0]		=	"Tekstury";
+	text[1]		= 	"Szczegó³owoœæ tekstur."; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
-	dimx		=	3000;	dimy		=	750;
+	posy		=	MENU_START_Y + MENU_DY*0;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften
 	flags		= flags | IT_EFFECTS_NEXT;		
 };
 
-INSTANCE MENUITEM_GRA_TEXQUAL_SLIDER(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_TEXQUAL_SLIDER(C_MENU_ITEM_PANEL3_SLIDER_DEF)
 {
 	backPic		=	MENU_SLIDER_BACK_PIC;
 	type		=	MENU_ITEM_SLIDER;	
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*0 + MENU_SLIDER_YPLUS;
-	dimx = MENU_SLIDER_DX;dimy = MENU_SLIDER_DY;
+	posy	 +=	MENU_START_Y + MENU_DY*0;
 	// Aktionen	
 	onChgSetOption													= "texDetailIndex";
 	onChgSetOptionSection 											= "INTERNAL";
@@ -78,27 +79,25 @@ INSTANCE MENUITEM_GRA_TEXQUAL_SLIDER(C_MENU_ITEM_DEF)
 // Modell-Detail-Level
 //
 
-INSTANCE MENUITEM_GRA_MODEL_DETAIL(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_MODEL_DETAIL(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Model Detail";
-	text[1]		= 	"Detail level of objects."; // Kommentar
+	text[0]		=	"Modele";
+	text[1]		= 	"Szczegó³owoœæ modeli 3D."; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
-	dimx		=	3000;	dimy		=	750;
+	posy		=	MENU_START_Y + MENU_DY*1;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften
 	flags			= flags | IT_EFFECTS_NEXT;
 };
 
-instance MENUITEM_GRA_MODEL_DETAIL_SLIDER(C_MENU_ITEM_DEF)
+instance MENUITEM_GRA_MODEL_DETAIL_SLIDER(C_MENU_ITEM_PANEL3_SLIDER_DEF)
 {
 	backPic		=	MENU_SLIDER_BACK_PIC;
 	type		=	MENU_ITEM_SLIDER;	
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*1 + MENU_SLIDER_YPLUS;
-	dimx = MENU_SLIDER_DX;dimy = MENU_SLIDER_DY;
+	posy	 +=	MENU_START_Y + MENU_DY*1;
 	// Aktionen
 	onChgSetOption													= "modelDetail";
 	onChgSetOptionSection 											= "PERFORMANCE";
@@ -115,14 +114,13 @@ instance MENUITEM_GRA_MODEL_DETAIL_SLIDER(C_MENU_ITEM_DEF)
 // Sight
 //
 
-instance MENUITEM_GRA_SIGHT(C_MENU_ITEM_DEF)
+instance MENUITEM_GRA_SIGHT(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Visual Range";
-	text[1]		= "Visual range in per cent."; // Kommentar
+	text[0]		= "Widok";
+	text[1]		= "Zasiêg generowania obrazu."; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
-	dimx		=	3000;	dimy		=	750;
+	posy		=	MENU_START_Y + MENU_DY*2;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
 	// Weitere Einstellungen
@@ -130,15 +128,14 @@ instance MENUITEM_GRA_SIGHT(C_MENU_ITEM_DEF)
 };
 
 
-INSTANCE MENUITEM_GRA_SIGHT_CHOICE(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_SIGHT_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
 	text[0]		=   "20%|40%|60%|80%|100%|120%|140%|160%|180%|200%|220%|240%|260%|280%|300%";
 	fontName	=   MENU_FONT_SMALL;
-	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
-	dimx = MENU_SLIDER_DX;dimy = MENU_CHOICE_DY;
+	// Position und Dimension
+	posy	 +=	MENU_START_Y + MENU_DY*2;
 	// Aktionen	
 	onChgSetOption													= "sightValue";
 	onChgSetOptionSection 											= "PERFORMANCE";
@@ -153,31 +150,27 @@ INSTANCE MENUITEM_GRA_SIGHT_CHOICE(C_MENU_ITEM_DEF)
 // Himmels-Effekte
 //
 
-INSTANCE MENUITEM_GRA_SKY_EFFECTS(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_SKY_EFFECTS(C_MENU_ITEM_PANEL3_COL1_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	//text[0]		=	"Himmelseffekte";
-	//text[1]		= 	"Himmelseffekte an- bzw. abschalten."; // Kommentar
-	text[0]		=	"Sky Effects";
-	text[1]		= 	"Toggles sky effects on/off"; // Kommentar
+	text[0]		=	"Niebo";
+	text[1]		= 	"Specjalne efekty nieba."; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
-	dimx		=	3000;	dimy		=	750;
+	posy		=	MENU_START_Y + MENU_DY*3;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften
 	flags			= flags | IT_EFFECTS_NEXT;
 };
 
-instance MENUITEM_GRA_SKY_EFFECTS_CHOICE(C_MENU_ITEM_DEF)
+instance MENUITEM_GRA_SKY_EFFECTS_CHOICE(C_MENU_ITEM_PANEL3_CHOICE_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"off|on";
+	text[0]		= 	"wy³.|w³.";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*3 + MENU_CHOICE_YPLUS;
-	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
+	posy		+=	MENU_START_Y + MENU_DY*3;
 	// Aktionen
 	onChgSetOption													= "skyEffects";
 	onChgSetOptionSection 											= "GAME";
@@ -188,13 +181,12 @@ instance MENUITEM_GRA_SKY_EFFECTS_CHOICE(C_MENU_ITEM_DEF)
 
 
 
-INSTANCE MENUITEM_GRA_BACK(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_GRA_BACK(C_MENU_ITEM_PANEL3_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Back";
-	// Position und Dimension	
-	posx		=	1000;		posy		=	MENU_BACK_Y;
-	dimx		=	6192;		dimy		=	MENU_DY;
+	text[0]		=	"Wstecz";
+	// Position und Dimension
+	posy		=	MENU_BACK_Y;
 	// Aktionen
 	onSelAction[0]	= 	SEL_ACTION_BACK;	
 	flags = flags | IT_TXT_CENTER;

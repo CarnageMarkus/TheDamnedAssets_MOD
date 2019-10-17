@@ -2,25 +2,25 @@
 // change keys menu
 // *********************************************************************
 
-instance MENU_OPT_CONTROLS(C_MENU_DEF) 
+instance MENU_OPT_CONTROLS(C_MENU_WITH_FAKE_PANEL) 
 {
-	backpic			= MENU_BACK_PIC;
+	items[10]	= "MENUITEM_PANEL4";
 	
-	items[0]		= "MENU_ITEM_CHG_KEYS_HEADLINE";
+	items[36]		= "MENU_ITEM_CHG_KEYS_HEADLINE";
 	
 	// Items
 	
-	items[1]		= "MENU_ITEM_KEY_UP";
-	items[2]		= "MENU_ITEM_KEY_DOWN";
-	items[3]		= "MENU_ITEM_KEY_LEFT";
-	items[4]		= "MENU_ITEM_KEY_RIGHT";
-	items[5]		= "MENU_ITEM_KEY_STRAFE_LEFT";
-	items[6]		= "MENU_ITEM_KEY_STRAFE_RIGHT";	
+	items[37]		= "MENU_ITEM_KEY_UP";
+	items[38]		= "MENU_ITEM_KEY_DOWN";
+	items[39]		= "MENU_ITEM_KEY_LEFT";
+	items[40]		= "MENU_ITEM_KEY_RIGHT";
+	items[41]		= "MENU_ITEM_KEY_STRAFE_LEFT";
+	items[42]		= "MENU_ITEM_KEY_STRAFE_RIGHT";	
 			
-	items[7]		= "MENU_ITEM_KEY_WEAPON";	
-	items[8]		= "MENU_ITEM_KEY_ACTION";	
-	items[9]		= "MENU_ITEM_KEY_JUMPCLIMBSTRAFE";	
-	items[10]		= "MENU_ITEM_KEY_RUNMODETOGGLE";
+	items[43]		= "MENU_ITEM_KEY_WEAPON";	
+	items[44]		= "MENU_ITEM_KEY_ACTION";	
+	items[45]		= "MENU_ITEM_KEY_JUMPCLIMBSTRAFE";	
+	items[46]		= "MENU_ITEM_KEY_RUNMODETOGGLE";
 	items[11]		= "MENU_ITEM_KEY_SNEAK";		
 	items[12]		= "MENU_ITEM_KEY_LOOK";
 	items[13]		= "MENU_ITEM_KEY_LOOK_FP";
@@ -57,17 +57,32 @@ instance MENU_OPT_CONTROLS(C_MENU_DEF)
 	
 	items[35]		= "MENUITEM_CHG_KEYS_BACK";
 		
-	flags = flags | MENU_SHOW_INFO;
+	//flags = flags | MENU_SHOW_INFO;
 };
 
+INSTANCE MENUITEM_PANEL4(C_MENU_ITEM_DEF) 
+{
+	backPic	=	MENU_BACK_PIC;
+	
+	// Positionen  und Dimensionen	
+	posx		=	MENU_PANEL3_X;
+	posy		=	MENU_PANEL3_Y - 512;
+	dimx		=	MENU_PANEL3_WIDTH;
+	dimy		=	MENU_PANEL3_HEIGHT + 1024;
+	// Weitere Eigenschaften
+	alphaMode 	=	"BLEND";	
+	alpha	=	255;		
+	flags	=	flags | IT_TXT_CENTER;
+	flags	=	flags & ~IT_SELECTABLE;
+};
 
-const int ctrl_sp1_1 	= 1100;						// 1.Spalte (Beschreibung)
-const int ctrl_sp1_2 	= ctrl_sp1_1 + 2700;		// 1.Spalte (Taste)
+const int ctrl_sp1_1 	= MENU_PANEL3_COL1_X;						// 1.Spalte (Beschreibung)
+const int ctrl_sp1_2 	= MENU_PANEL3_COL2_X;		// 1.Spalte (Taste)
 
 const int ctrl_dimx  	= 3200;		// Breite des Tastenfeldes
 
 const int ctrl_y_step  	= 260;			// Abstand der Felder (y)
-const int ctrl_y_title	= 800;	// Start der Felder (y)
+const int ctrl_y_title	= 700;	// Start der Felder (y)
 const int ctrl_y_start 	= ctrl_y_title + ctrl_y_step*2;	// Start der Felder (y)
 const int CTRL_GROUP1   = ctrl_y_step * 0;
 const int CTRL_GROUP2   = ctrl_y_step * 1;
@@ -76,20 +91,34 @@ const int CTRL_GROUP4	= ctrl_y_step * 3;
 const int CTRL_GROUP5	= ctrl_y_step * 4;
 
 
-INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_DEF) 
+// INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_DEF) 
+// {
+	// text[0]		=	"USTAWIENIA KLAWIATURY";
+	// type		=	MENU_ITEM_TEXT;	
+	// // Position und Dimension	
+	
+	// posy		= ctrl_y_title;
+	// dimx		= 8100;
+	// fontName 	= MENU_FONT_BRIGHT;
+	// flags		= flags & ~IT_SELECTABLE;
+	// flags		= flags | IT_TXT_CENTER;
+// };
+
+INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_PANEL3_DEF) 
 {
-	text[0]		=	"KEYBOARD SETTINGS";
-	type		=	MENU_ITEM_TEXT;	
+	backpic		= MENU_ITEM_BACK_PIC;
+	text[0]		=	"USTAWIENIA KLAWIATURY";
+	type		= MENU_ITEM_TEXT;
 	// Position und Dimension	
-	posx		= 0;		
-	posy		= ctrl_y_title;
-	dimx		= 8100;
-	fontName 	= MENU_FONT_BRIGHT;
+	posy		= MENU_TITLE_Y - 512;
+	// Weitere Eigenschaften
 	flags		= flags & ~IT_SELECTABLE;
 	flags		= flags | IT_TXT_CENTER;
 };
 
-	
+	// posx = MENU_PANEL3_COL1_X;
+	// posy	 = MENU_START_Y + MENU_PANEL3_STEP*0;
+	// dimx = MENU_PANEL3_COL1_WIDTH;
 
 //
 // Group 1
@@ -97,8 +126,9 @@ INSTANCE MENU_ITEM_CHG_KEYS_HEADLINE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_UP(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Forward";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Do przodu";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
+	
 	posx			= 	ctrl_sp1_1;	posy	= 	ctrl_y_start + ctrl_y_step * 0 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]=	"RUN MENU_ITEM_INP_UP";
@@ -108,8 +138,8 @@ INSTANCE MENU_ITEM_KEY_UP(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_DOWN(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Backwards";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Do ty³u";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 1 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_DOWN";  
@@ -119,8 +149,8 @@ INSTANCE MENU_ITEM_KEY_DOWN(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LEFT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Turn left";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Obrót w lewo";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 2 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_LEFT";  
@@ -130,8 +160,8 @@ INSTANCE MENU_ITEM_KEY_LEFT(C_MENU_ITEM_DEF)
 	
 INSTANCE MENU_ITEM_KEY_RIGHT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Turn right";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Obrót w prawo";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 3 + CTRL_GROUP1;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -143,8 +173,8 @@ INSTANCE MENU_ITEM_KEY_RIGHT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_STRAFE_LEFT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Strafe left";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Krok w lewo";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 4 + CTRL_GROUP1;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
 	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_STRAFE_LEFT";  
@@ -154,8 +184,8 @@ INSTANCE MENU_ITEM_KEY_STRAFE_LEFT(C_MENU_ITEM_DEF)
 	
 INSTANCE MENU_ITEM_KEY_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Strafe right";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Krok w prawo";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 5 + CTRL_GROUP1;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -172,8 +202,8 @@ INSTANCE MENU_ITEM_KEY_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_WEAPON(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Weapons";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Broñ";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 6 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -184,8 +214,8 @@ INSTANCE MENU_ITEM_KEY_WEAPON(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_ACTION(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Action";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Dzia³anie";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 7 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -196,8 +226,8 @@ INSTANCE MENU_ITEM_KEY_ACTION(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Jump/Side step";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Skok/Odejœcie";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 8 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -209,8 +239,8 @@ INSTANCE MENU_ITEM_KEY_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 {	
-	text[0]			=	"Run";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Bieg";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 9 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -221,8 +251,8 @@ INSTANCE MENU_ITEM_KEY_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SNEAK(C_MENU_ITEM_DEF)
 {	
-	text[0]			=	"Sneak";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Skradanie siê";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 10 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -233,8 +263,8 @@ INSTANCE MENU_ITEM_KEY_SNEAK(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LOOK(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Look around";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Rozgl¹danie siê";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 11 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -245,8 +275,8 @@ INSTANCE MENU_ITEM_KEY_LOOK(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_LOOK_FP(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Look around first person";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Widok z oczu postaci";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 12 + CTRL_GROUP2;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -261,8 +291,8 @@ INSTANCE MENU_ITEM_KEY_LOOK_FP(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_INVENTORY(C_MENU_ITEM_DEF)
 {
-	text[0]			=	"Inventory";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]			=	"Ekwipunek";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP3;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -273,8 +303,8 @@ INSTANCE MENU_ITEM_KEY_INVENTORY(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SCREEN_STATUS(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Player's status";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]		=	"Wspó³czynniki";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx		=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 14 + CTRL_GROUP3;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -286,8 +316,8 @@ INSTANCE MENU_ITEM_KEY_SCREEN_STATUS(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_KEY_SCREEN_LOG(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Missions and notes";
-	text[1]			=   "Press DEL to remove and ENTER to define a key."; // Kommentar
+	text[0]		=	"Notatki i zadania";
+	text[1]			=   "DEL - usuwa, ENTER - przypisuje klawisz."; // Kommentar
 	posx		=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 15 + CTRL_GROUP3;
 	
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -303,7 +333,7 @@ INSTANCE MENU_ITEM_KEY_SCREEN_LOG(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_UP(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_KBDINPUT_BACK_PIC;	
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	type		= 	MENU_ITEM_INPUT;
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 0 + CTRL_GROUP1;	
@@ -319,7 +349,7 @@ INSTANCE MENU_ITEM_INP_UP(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_DOWN(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 1 + CTRL_GROUP1;	
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -335,7 +365,7 @@ INSTANCE MENU_ITEM_INP_DOWN(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LEFT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 2 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -349,7 +379,7 @@ INSTANCE MENU_ITEM_INP_LEFT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_RIGHT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 3 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -364,7 +394,7 @@ INSTANCE MENU_ITEM_INP_RIGHT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_STRAFE_LEFT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 4 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -378,7 +408,7 @@ INSTANCE MENU_ITEM_INP_STRAFE_LEFT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 5 + CTRL_GROUP1;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -396,7 +426,7 @@ INSTANCE MENU_ITEM_INP_STRAFE_RIGHT(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_WEAPON(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 6 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -414,7 +444,7 @@ INSTANCE MENU_ITEM_INP_WEAPON(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_ACTION(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 7 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;	dimy		=	300;
@@ -430,7 +460,7 @@ INSTANCE MENU_ITEM_INP_ACTION(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 8 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -448,7 +478,7 @@ INSTANCE MENU_ITEM_INP_JUMPCLIMBSTRAFE(C_MENU_ITEM_DEF)
 instance MENU_ITEM_INP_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 9 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -465,7 +495,7 @@ instance MENU_ITEM_INP_RUNMODETOGGLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SNEAK(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 10 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -481,7 +511,7 @@ INSTANCE MENU_ITEM_INP_SNEAK(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LOOK(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 11 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -498,7 +528,7 @@ INSTANCE MENU_ITEM_INP_LOOK(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_LOOK_FP(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 12 + CTRL_GROUP2;
 	dimx		=	ctrl_dimx;
@@ -518,7 +548,7 @@ INSTANCE MENU_ITEM_INP_LOOK_FP(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_INVENTORY(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -535,7 +565,7 @@ INSTANCE MENU_ITEM_INP_INVENTORY(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SCREEN_STATUS(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 14 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -551,7 +581,7 @@ INSTANCE MENU_ITEM_INP_SCREEN_STATUS(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_INP_SCREEN_LOG(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_INPUT;
-	text[1] 	=   "Press desired key.";
+	text[1] 	=   "Naciœnij ¿¹dany klawisz.";
 	
 	posx		=	ctrl_sp1_2;		posy	=	ctrl_y_start + ctrl_y_step * 15 + CTRL_GROUP3;
 	dimx		=	ctrl_dimx;
@@ -571,8 +601,8 @@ INSTANCE MENU_ITEM_INP_SCREEN_LOG(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_CHG_KEYS_SET_DEFAULT(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Default Setting";	
-	text[1]		=	"Sets the keyboard setting back to default."; // Kommentar
+	text[0]		=	"Domyœlne ustawienia";	
+	text[1]		=	"Przywraca domyœlne ustawienia klawiatury."; // Kommentar
 	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 16 + CTRL_GROUP4;
 	dimy		=	300;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -583,8 +613,8 @@ INSTANCE MENU_ITEM_CHG_KEYS_SET_DEFAULT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Alternative Setting";	
-	text[1]		=	"Activates an alternative keyboard setting."; // Kommentar
+	text[0]		=	"Alternatywne ustawienia";	
+	text[1]		=	"Uaktywnia alternatywne ustawienia klawiatury."; // Kommentar
 	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 17 + CTRL_GROUP4;
 	dimy		=	300;
 	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
@@ -593,17 +623,27 @@ INSTANCE MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE(C_MENU_ITEM_DEF)
 	flags = flags;
 };
 
-
-
-INSTANCE MENUITEM_CHG_KEYS_BACK(C_MENU_ITEM_DEF)
+INSTANCE MENUITEM_CHG_KEYS_BACK(C_MENU_ITEM_PANEL3_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Back";
+	text[0]		=	"Wstecz";
 	// Position und Dimension	
-	posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 18 + CTRL_GROUP5;
-	dimy		=	300;
+	posy		=	MENU_BACK_Y + 512;
 	// Aktionen
-	fontName 	= 	MENU_FONT_SMALL;
-	onSelAction[0]	= 	SEL_ACTION_BACK;	
-	flags = flags | IT_TXT_CENTER;
+	onSelAction[0]	= 	SEL_ACTION_BACK;		
+	
+	flags = flags | IT_TXT_CENTER;	
 };
+
+// INSTANCE MENUITEM_CHG_KEYS_BACK(C_MENU_ITEM_DEF)
+// {
+	// backpic		=	MENU_ITEM_BACK_PIC;
+	// text[0]		=	"Wstecz";
+	// // Position und Dimension	
+	// posx		=	ctrl_sp1_1;		posy		=	ctrl_y_start + ctrl_y_step * 18 + CTRL_GROUP5;
+	// dimy		=	300;
+	// // Aktionen
+	// fontName 	= 	MENU_FONT_SMALL;
+	// onSelAction[0]	= 	SEL_ACTION_BACK;	
+	// flags = flags | IT_TXT_CENTER;
+// };
