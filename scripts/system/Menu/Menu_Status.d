@@ -145,7 +145,7 @@ const int STAT_B_X3 = 7200;
 
 instance MENU_ITEM_PLAYERGUILD_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	 = "Guild:";
+	text[0]	 = "Gildia:";
 	posx	 = STAT_A_X1;	posy = STAT_PLY_Y+STAT_DY*0;	
 	fontName	=	STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
@@ -190,7 +190,7 @@ INSTANCE MENU_ITEM_PLAYERNAME(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_LEVEL_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 1*STAT_DY;
-	text[0]	= "Level";	
+	text[0]	= "Poziom";	
 	fontName= STAT_FONT_DEFAULT;		
 	flags	= flags & ~IT_SELECTABLE;
 };
@@ -198,7 +198,7 @@ INSTANCE MENU_ITEM_LEVEL_TITLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_EXP_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 2*STAT_DY;	
-	text[0]	= "Experience"; 
+	text[0]	= "Doœwiadczenie"; 
 	fontName = STAT_FONT_DEFAULT;	
 	flags	= flags & ~IT_SELECTABLE;
 };
@@ -206,7 +206,7 @@ INSTANCE MENU_ITEM_EXP_TITLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_LEVEL_NEXT_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 3*STAT_DY;	
-	text[0]	= "Next Level";
+	text[0]	= "Nastêpny poz.";
 	fontName = STAT_FONT_DEFAULT;
 	flags	= flags & ~IT_SELECTABLE;
 };
@@ -214,7 +214,7 @@ INSTANCE MENU_ITEM_LEVEL_NEXT_TITLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_LEARN_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_PLY_Y + 4*STAT_DY;	
-	text[0]	= "Skill Points";	
+	text[0]	= "Punkty nauki";	
 	fontName = STAT_FONT_DEFAULT;
 	flags	= flags & ~IT_SELECTABLE;
 };
@@ -258,7 +258,7 @@ INSTANCE MENU_ITEM_LEARN(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ATTRIBUTE_HEADING(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 0*STAT_DY;
-	text[0]		=  "ATTRIBUTES";	
+	text[0]		=  "ATRYBUTY";	
 	fontName	=	STAT_FONT_TITLE;
 	flags		= flags & ~IT_SELECTABLE;
 };
@@ -267,14 +267,14 @@ INSTANCE MENU_ITEM_ATTRIBUTE_HEADING(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ATTRIBUTE_1_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 1*STAT_DY;
-	text[0]		= 	"Strength";
+	text[0]		= 	"Si³a";
 	fontName	= 	STAT_FONT_DEFAULT;
 	flags		= 	flags & ~IT_SELECTABLE;
 };
 INSTANCE MENU_ITEM_ATTRIBUTE_2_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 2*STAT_DY;
-	text[0]		=	"Dexterity";
+	text[0]		=	"Zrêcznoœæ";
 	fontName	=	STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
 };
@@ -288,7 +288,7 @@ INSTANCE MENU_ITEM_ATTRIBUTE_3_TITLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ATTRIBUTE_4_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X1;	posy = STAT_ATR_Y + 4*STAT_DY;
-	text[0]		=	"Life";
+	text[0]		=	"¯ycie";
 	fontName	=	STAT_FONT_DEFAULT;
 	flags		=	flags & ~IT_SELECTABLE;
 };
@@ -326,7 +326,7 @@ INSTANCE MENU_ITEM_ATTRIBUTE_4(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "PROTECTION";
+	text[0]	= "OCHRONA";
 	fontName	=	STAT_FONT_TITLE;
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 0*STAT_DY;
 	flags = flags & ~IT_SELECTABLE;
@@ -334,21 +334,21 @@ INSTANCE MENU_ITEM_ARMOR_HEADING(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_1_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "against weapons";
+	text[0]	= "przed broni¹";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 1*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_2_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "against arrows";
+	text[0]	= "przed strza³ami";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 2*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "against fire";
+	text[0]	= "przed ogniem";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 3*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
@@ -356,7 +356,7 @@ INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_4_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]	= "against magic";
+	text[0]	= "przed magi¹";
 	posx =  STAT_A_X1; posy = STAT_ARM_Y + 4*STAT_DY;	fontName = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
@@ -395,7 +395,7 @@ INSTANCE MENU_ITEM_ARMOR_4(C_MENU_ITEM_DEF)
 // Headings
 INSTANCE MENU_ITEM_TALENTS_WEAPON_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "FIGHTING SKILLS / CRITICAL HIT";
+	text[0]	= "UMIEJ. WALKI / TRAF. KRYTYCZNE";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*0;
 	fontName	=	STAT_FONT_TITLE;	
 	flags		=	flags & ~IT_SELECTABLE;
@@ -403,7 +403,7 @@ INSTANCE MENU_ITEM_TALENTS_WEAPON_HEADING(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_TALENTS_THIEF_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "THIEVING SKILLS / CHANCE OF FAILURE";
+	text[0]	= "UMIEJ. Z£ODZIEJSKIE / SZANSA PORA¯KI";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*6;
 	fontName	=	STAT_FONT_TITLE;	
 	flags		=	flags & ~IT_SELECTABLE;
@@ -411,7 +411,7 @@ INSTANCE MENU_ITEM_TALENTS_THIEF_HEADING(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_TALENTS_SPECIAL_HEADING(C_MENU_ITEM_DEF)
 {
-	text[0]	= "SPECIAL SKILLS";
+	text[0]	= "UMIEJ. SPECJALNE";
 	posx	= STAT_B_X1; posy = STAT_TAL_Y + STAT_DY*14;
 	fontName	=	STAT_FONT_TITLE;
 	flags		=	flags & ~IT_SELECTABLE;

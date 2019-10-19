@@ -134,11 +134,11 @@
 	
 	const int MENU_MAIN_QUIT_Y			= MENU_MAIN_Y + MENU_MAIN_DY*5;
 	const string MENU_MAIN_QUIT_TITLE		= "Wyjœcie";
-	const string MENU_MAIN_QUIT_TEXT		= "Powrót do odch³ani systemu Windows.";
+	const string MENU_MAIN_QUIT_TEXT		= "Powrót do otch³ani systemu Windows.";
 	
 //
 // Texts (muss in die Text.d)
 //
 
 	const string MENU_TEXT_NEEDS_APPLY		= "";
-	const string MENU_TEXT_NEEDS_RESTART	= "Einige Einstellungen werden erst nach einem Neustart aktiv";
+	const string MENU_TEXT_NEEDS_RESTART	= "Wymagane ponowne uruchomienie gry!";

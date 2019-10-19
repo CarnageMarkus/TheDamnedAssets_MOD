@@ -39,7 +39,7 @@ const int LOG_ITEM_LIST_WIDTH	= 4500;
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Current\nMissions";
+	text[0]		=	"Aktywne\nzadania";
 	posx		=	LOG_ITEM_X1;
 	posy		=   	1500;
 	dimx 		= 	LOG_ITEM_DX1;
@@ -53,7 +53,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Completed\nMissions";
+	text[0]		=	"Wykonane\nzadania";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	2500;
@@ -69,7 +69,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Failed\nMissions";
+	text[0]		=	"Nieudane\nzadania";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	3500;
@@ -85,7 +85,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_LOG(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"General\nInfo";
+	text[0]		=	"Informacje\nogólne";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	4500;
@@ -208,7 +208,7 @@ INSTANCE MENU_ITEM_CONTENT_VIEWER(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Day";
+	text[0]		= 	"Dzieñ";
 	posx 		= 	1800; // see dimx of MENU_ITEM_DAY!!
 	posy		= 	6000;
 	fontName	=	LOG_FONT_DATETIME;
@@ -217,7 +217,7 @@ INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_TIME_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Time:";
+	text[0]		= 	"Czas:";
 	posx 		= 	1500;
 	posy		= 	6300;
 	fontName	=	LOG_FONT_DATETIME;
