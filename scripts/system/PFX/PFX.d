@@ -10,6 +10,45 @@
 // INSTANCE PartikelEffekt1 (C_ParticleFX) 
 // INSTANCE PartikelEffekt1 (C_ParticleFXProto) 
 
+INSTANCE zGROUNDFOG (C_PARTICLEFX)
+{
+     ppsvalue = 360;
+     ppsscalekeys_s = "1.0";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     shptype_s = "BOX";
+     shpfor_s = "WORLD";
+     shpoffsetvec_s = "0 -50 0";
+     shpdistribtype_s = "WALK";
+     shpdistribwalkspeed = 0.100000001;
+     shpisvolume = 1;
+     shpdim_s = "3000 20 3000";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "DIR";
+     dirangleheadvar = 50;
+     dirangleelev = 90;
+     dirangleelevvar = 20;
+     lsppartavg = 5500;
+     lsppartvar = 800;
+     flygravity_s = "0 0 0";
+     visname_s = "FIRESMOKE.TGA";
+     visorientation_s = "NONE";
+     vistexisquadpoly = 1;
+     vistexanifps = 5000;
+     vistexaniislooping = 2;
+     vistexcolorstart_s = "140 140 140";
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "1 1";
+     vissizeendscale = 400;
+     visalphafunc_s = "BLEND";
+     visalphastart = 150;
+     visalphaend = 0;
+
+};
+
 // ******************************************************************************************
 // Spiel PFX 
 // ******************************************************************************************
