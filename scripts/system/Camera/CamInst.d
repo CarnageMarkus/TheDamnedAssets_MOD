@@ -437,9 +437,9 @@ INSTANCE CAMMODMOBCHAIR (CCAMSYS_DEF)
 // auf Bank sitzen (BENCH)
 INSTANCE CAMMODMOBBENCH (CCAMSYS_DEF)
 {
-     bestrange = 1.20000000;
-     minrange = 0.500000000;
-     maxrange = 1.900000000;
+     bestrange = 2.20000000;
+     minrange = 1.500000000;
+     maxrange = 2.900000000;
      bestelevation = 10.000000000;
      minelevation = 30.000000000;
      maxelevation = 90.000000000;

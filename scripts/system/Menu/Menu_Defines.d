@@ -9,8 +9,8 @@
 	const string MENU_ITEM_BACK_PIC 	= "";						// Hintergrund für alle anwählbaren Menüpunkte
 	const string MENU_CHOICE_BACK_PIC	= "Menu_Choice_Back_Sect.tga";	// Hintergrund für Choicebox
 	const string MENU_CHOICE_BACK_PIC2	= "Menu_Choice_Back_Sect_Wide.tga";	// Hintergrund für Choicebox
-	const string MENU_SLIDER_BACK_PIC	= "menu_slider_back.tga";	// Hintergrund für Slider
-	const string MENU_SLIDER_POS_PIC	= "menu_slider_pos.tga";	// Textur für Positionsanzeige eines Sliders
+	const string MENU_SLIDER_BACK_PIC	= "Menu_Slider_Back_Sect.tga";	// Hintergrund für Slider
+	const string MENU_SLIDER_POS_PIC	= "Menu_Slider_Pos_Sect.tga";	// Textur für Positionsanzeige eines Sliders
 	const string MENU_INPUT_BACK_PIC 	= "";						// Hintergrund für Eingabefelder
 	const string MENU_KBDINPUT_BACK_PIC = "";						// Hintergrund fürs Definieren der Controls
 	const string MENU_SAVELOAD_BACK_PIC = "Menu_SaveLoad_Back.tga"; // menu_kbd_back.tga";		// Hintergrund fürs Definieren der Controls

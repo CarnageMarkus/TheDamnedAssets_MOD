@@ -195,7 +195,7 @@
 				INSTANCE Inst_Lute_A4					(C_SFX_DEF) {file= "lute_05.wav";					vol = 20;			};
 				INSTANCE Inst_Lute_A5					(C_SFX_DEF) {file= "lute_06.wav";					vol = 25;			};
 				INSTANCE Inst_Lute_A6					(C_SFX_DEF) {file= "lute_07.wav";					vol = 30;			};
-				INSTANCE Inst_Alarm						(C_SFX_DEF) {file= "trumpet_01.wav";				vol = 120;			};
+				INSTANCE Inst_Alarm					(C_SFX_DEF) {file= "trumpet_01.wav";	vol = 127;	};
 		
 /* Paper */	
 				INSTANCE Map_Unfold						(C_SFX_DEF) {file= "Paperhandle.wav";				vol = 60;			};
@@ -1390,20 +1390,20 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 // an anderer Stelle uebereinstimmen (z.B. hat Ulf die moeglichen 'Objekt-Materialien' an anderer Stelle
 // definiert).
 
-				CONST STRING CS_MH = "FL LE ME";			// Flesh, Leather, Metal
-				CONST STRING CS_MA = "FI JA TA";			// Fist, Jaw, Tail
-				CONST STRING CS_IH = "WO ST ME LE CL GL";	// Wood, Stone, Metal, Leather, Clay, Glas
-				CONST STRING CS_IA = "WO ME ME ME";			// Dagger, 1hSword, 2hSword, 2hAxe
-				CONST STRING CS_OH = "WO ST ME LE CL GL";
-				
-				CONST STRING CS_HM = "FL LE ME";
-				CONST STRING CS_AM = "DM BL BM";			// Damage, BL = Bounces from Leather (Kein Schaden), BM = Bounces from Metal
-				CONST STRING CS_HI = "WO ST ME LE CL GL";
-				CONST STRING CS_AI = "WO BW ME LE CL GL";
-				CONST STRING CS_HO = "WO ST ME LE CL GL";
-				CONST STRING CS_AO = "WO ST ME LE CL GL";
-				CONST STRING CS_HL = "UD ME ST WO EA WA";
-				CONST STRING CS_AL = "UD ME ST WO EA WA";
+CONST STRING CS_MH = "FL LE ME";			// Flesh, Leather, Metal
+CONST STRING CS_MA = "FI JA TA";			// Fist, Jaw, Tail
+CONST STRING CS_IH = "WO ST ME LE CL GL";	// Wood, Stone, Metal, Leather, Clay, Glas
+CONST STRING CS_IA = "WO ME ME ME";			// Dagger, 1hSword, 2hSword, 2hAxe
+CONST STRING CS_OH = "WO ST ME LE CL GL";
+
+CONST STRING CS_HM = "FL LE ME";
+CONST STRING CS_AM = "DM BL BM";			// Damage, BL = Bounces from Leather (Kein Schaden), BM = Bounces from Metal
+CONST STRING CS_HI = "WO ST ME LE CL GL";
+CONST STRING CS_AI = "WO BW ME LE CL GL";
+CONST STRING CS_HO = "WO ST ME LE CL GL";
+CONST STRING CS_AO = "WO ST ME LE CL GL";
+CONST STRING CS_HL = "UD ME ST WO EA WA";
+CONST STRING CS_AL = "UD ME ST WO EA WA";
 
 
 
@@ -1413,12 +1413,12 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 
 // "DS_<OBJ_MATERIAL>" (WO ST ME LE CL GL - Wood, Stone, Metal, Leather, Clay, Glass)
 /*
-				INSTANCE DS_WO							(C_SFX_DEF) {file= "Crash;Wood_2.wav";									};
-				INSTANCE DS_ST							(C_SFX_DEF) {file= "Crash;Wood_2.wav";									};
-				INSTANCE DS_ME							(C_SFX_DEF) {file= "Crash;Wood_2.wav";									};
-				INSTANCE DS_LE							(C_SFX_DEF) {file= "Crash;Item.wav";									};
-				INSTANCE DS_CL							(C_SFX_DEF) {file= "CRASH;CLAY.wav";									};
-				INSTANCE DS_GL							(C_SFX_DEF) {file= "Crash;Wood_2.wav";									};
+INSTANCE DS_WO		(C_SFX_DEF) {file= "Crash;Wood_2.wav";	};
+INSTANCE DS_ST		(C_SFX_DEF) {file= "Crash;Wood_2.wav";	};
+INSTANCE DS_ME		(C_SFX_DEF) {file= "Crash;Wood_2.wav";	};
+INSTANCE DS_LE		(C_SFX_DEF) {file= "Crash;Item.wav";	};
+INSTANCE DS_CL		(C_SFX_DEF) {file= "CRASH;CLAY.wav";	};
+INSTANCE DS_GL		(C_SFX_DEF) {file= "Crash;Wood_2.wav";	};
 */
 
 
@@ -1428,7 +1428,7 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 
 // (loop=1!), "SS_<LEVEL_MATERIAL>"
 
-				INSTANCE SS_UD							(C_SFX_DEF) {file= "slide.wav";									loop=1;	};
+INSTANCE SS_UD			(C_SFX_DEF) {file= "slide.wav";		loop=1;	};
 //..
 
 
@@ -1771,129 +1771,386 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 
 
 // AARGH
-				INSTANCE SVM_1_AARGH					(C_SFX_DEF) {file= "svm_1_aargh_1.wav";				vol = 107;			};
-				INSTANCE SVM_1_AARGH_1					(C_SFX_DEF) {file= "svm_1_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_1_AARGH_2					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_1_AARGH_3					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_1_AARGH_4					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_1_AARGH		(C_SFX_DEF) {file= "svm_1_aargh_1.wav";		vol = 107;	};
+INSTANCE SVM_1_AARGH_1		(C_SFX_DEF) {file= "svm_1_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_1_AARGH_2		(C_SFX_DEF) {file= "svm_1_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_1_AARGH_3		(C_SFX_DEF) {file= "svm_1_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_1_AARGH_4		(C_SFX_DEF) {file= "svm_1_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_2_AARGH					(C_SFX_DEF) {file= "svm_2_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_2_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_2_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_2_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_2_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_2_AARGH		(C_SFX_DEF) {file= "svm_2_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_2_AARGH_1		(C_SFX_DEF) {file= "svm_2_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_2_AARGH_2		(C_SFX_DEF) {file= "svm_2_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_2_AARGH_3		(C_SFX_DEF) {file= "svm_2_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_2_AARGH_4		(C_SFX_DEF) {file= "svm_2_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_3_AARGH					(C_SFX_DEF) {file= "svm_3_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_3_AARGH_1					(C_SFX_DEF) {file= "svm_3_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_3_AARGH_2					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};
-				INSTANCE SVM_3_AARGH_3					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_3_AARGH_4					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_3_AARGH		(C_SFX_DEF) {file= "svm_3_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_3_AARGH_1		(C_SFX_DEF) {file= "svm_3_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_3_AARGH_2		(C_SFX_DEF) {file= "svm_3_aargh_3.wav";		vol = 107;	};
+INSTANCE SVM_3_AARGH_3		(C_SFX_DEF) {file= "svm_3_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_3_AARGH_4		(C_SFX_DEF) {file= "svm_3_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_4_AARGH					(C_SFX_DEF) {file= "svm_4_aargh_1.wav";				vol = 107;			};
-				INSTANCE SVM_4_AARGH_1					(C_SFX_DEF) {file= "svm_4_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_4_AARGH_2					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_4_AARGH_3					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_4_AARGH_4					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_4_AARGH		(C_SFX_DEF) {file= "svm_4_aargh_1.wav";		vol = 107;	};
+INSTANCE SVM_4_AARGH_1		(C_SFX_DEF) {file= "svm_4_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_4_AARGH_2		(C_SFX_DEF) {file= "svm_4_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_4_AARGH_3		(C_SFX_DEF) {file= "svm_4_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_4_AARGH_4		(C_SFX_DEF) {file= "svm_4_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_5_AARGH					(C_SFX_DEF) {file= "svm_1_aargh_1.wav";				vol = 110;			};				
-				INSTANCE SVM_5_AARGH_1					(C_SFX_DEF) {file= "svm_1_aargh_2.wav";				vol = 110;			};				
-				INSTANCE SVM_5_AARGH_2					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_5_AARGH_3					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_5_AARGH_4					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 110;			};				
+INSTANCE SVM_5_AARGH		(C_SFX_DEF) {file= "svm_5_aargh_1.wav";		vol = 110;	};				
+INSTANCE SVM_5_AARGH_1		(C_SFX_DEF) {file= "svm_5_aargh_2.wav";		vol = 110;	};				
+INSTANCE SVM_5_AARGH_2		(C_SFX_DEF) {file= "svm_5_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_5_AARGH_3		(C_SFX_DEF) {file= "svm_5_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_5_AARGH_4		(C_SFX_DEF) {file= "svm_5_aargh_3.wav";		vol = 110;	};				
 
-				INSTANCE SVM_6_AARGH					(C_SFX_DEF) {file= "svm_2_aargh_1.wav";				vol = 110;			};				
-				INSTANCE SVM_6_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 110;			};				
-				INSTANCE SVM_6_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 110;			};
-				INSTANCE SVM_6_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_6_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 110;			};				
+INSTANCE SVM_6_AARGH		(C_SFX_DEF) {file= "svm_6_aargh_1.wav";		vol = 110;	};				
+INSTANCE SVM_6_AARGH_1		(C_SFX_DEF) {file= "svm_6_aargh_2.wav";		vol = 110;	};				
+INSTANCE SVM_6_AARGH_2		(C_SFX_DEF) {file= "svm_6_aargh_3.wav";		vol = 110;	};
+INSTANCE SVM_6_AARGH_3		(C_SFX_DEF) {file= "svm_6_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_6_AARGH_4		(C_SFX_DEF) {file= "svm_6_aargh_3.wav";		vol = 110;	};				
 
-				INSTANCE SVM_7_AARGH					(C_SFX_DEF) {file= "svm_3_aargh_1.wav";				vol = 110;			};
-				INSTANCE SVM_7_AARGH_1					(C_SFX_DEF) {file= "svm_3_aargh_2.wav";				vol = 110;			};				
-				INSTANCE SVM_7_AARGH_2					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_7_AARGH_3					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_7_AARGH_4					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 110;			};				
+INSTANCE SVM_7_AARGH		(C_SFX_DEF) {file= "svm_7_aargh_1.wav";		vol = 110;	};
+INSTANCE SVM_7_AARGH_1		(C_SFX_DEF) {file= "svm_7_aargh_2.wav";		vol = 110;	};				
+INSTANCE SVM_7_AARGH_2		(C_SFX_DEF) {file= "svm_7_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_7_AARGH_3		(C_SFX_DEF) {file= "svm_7_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_7_AARGH_4		(C_SFX_DEF) {file= "svm_7_aargh_3.wav";		vol = 110;	};				
 
-				INSTANCE SVM_8_AARGH					(C_SFX_DEF) {file= "svm_4_aargh_1.wav";				vol = 110;			};				
-				INSTANCE SVM_8_AARGH_1					(C_SFX_DEF) {file= "svm_4_aargh_2.wav";				vol = 110;			};				
-				INSTANCE SVM_8_AARGH_2					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_8_AARGH_3					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 110;			};				
-				INSTANCE SVM_8_AARGH_4					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 110;			};				
+INSTANCE SVM_8_AARGH		(C_SFX_DEF) {file= "svm_8_aargh_1.wav";		vol = 110;	};				
+INSTANCE SVM_8_AARGH_1		(C_SFX_DEF) {file= "svm_8_aargh_2.wav";		vol = 110;	};				
+INSTANCE SVM_8_AARGH_2		(C_SFX_DEF) {file= "svm_8_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_8_AARGH_3		(C_SFX_DEF) {file= "svm_8_aargh_3.wav";		vol = 110;	};				
+INSTANCE SVM_8_AARGH_4		(C_SFX_DEF) {file= "svm_8_aargh_3.wav";		vol = 110;	};				
 
-				INSTANCE SVM_9_AARGH					(C_SFX_DEF) {file= "svm_1_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_9_AARGH_1					(C_SFX_DEF) {file= "svm_1_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_9_AARGH_2					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};
-				INSTANCE SVM_9_AARGH_3					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_9_AARGH_4					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_9_AARGH		(C_SFX_DEF) {file= "svm_9_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_9_AARGH_1		(C_SFX_DEF) {file= "svm_9_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_9_AARGH_2		(C_SFX_DEF) {file= "svm_9_aargh_3.wav";		vol = 107;	};
+INSTANCE SVM_9_AARGH_3		(C_SFX_DEF) {file= "svm_9_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_9_AARGH_4		(C_SFX_DEF) {file= "svm_9_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_10_AARGH					(C_SFX_DEF) {file= "svm_2_aargh_1.wav";				vol = 107;			};
-				INSTANCE SVM_10_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_10_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_10_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_10_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_10_AARGH		(C_SFX_DEF) {file= "svm_10_aargh_1.wav";		vol = 107;	};
+INSTANCE SVM_10_AARGH_1		(C_SFX_DEF) {file= "svm_10_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_10_AARGH_2		(C_SFX_DEF) {file= "svm_10_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_10_AARGH_3		(C_SFX_DEF) {file= "svm_10_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_10_AARGH_4		(C_SFX_DEF) {file= "svm_10_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_11_AARGH					(C_SFX_DEF) {file= "svm_3_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_11_AARGH_1					(C_SFX_DEF) {file= "svm_3_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_11_AARGH_2					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_11_AARGH_3					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_11_AARGH_4					(C_SFX_DEF) {file= "svm_3_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_11_AARGH		(C_SFX_DEF) {file= "svm_11_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_11_AARGH_1		(C_SFX_DEF) {file= "svm_11_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_11_AARGH_2		(C_SFX_DEF) {file= "svm_11_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_11_AARGH_3		(C_SFX_DEF) {file= "svm_11_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_11_AARGH_4		(C_SFX_DEF) {file= "svm_11_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_12_AARGH					(C_SFX_DEF) {file= "svm_4_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_12_AARGH_1					(C_SFX_DEF) {file= "svm_4_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_12_AARGH_2					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};
-				INSTANCE SVM_12_AARGH_3					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_12_AARGH_4					(C_SFX_DEF) {file= "svm_4_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_12_AARGH		(C_SFX_DEF) {file= "svm_12_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_12_AARGH_1		(C_SFX_DEF) {file= "svm_12_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_12_AARGH_2		(C_SFX_DEF) {file= "svm_12_aargh_3.wav";		vol = 107;	};
+INSTANCE SVM_12_AARGH_3		(C_SFX_DEF) {file= "svm_12_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_12_AARGH_4		(C_SFX_DEF) {file= "svm_12_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_13_AARGH					(C_SFX_DEF) {file= "svm_1_aargh_1.wav";				vol = 107;			};
-				INSTANCE SVM_13_AARGH_1					(C_SFX_DEF) {file= "svm_1_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_13_AARGH_2					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_13_AARGH_3					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_13_AARGH_4					(C_SFX_DEF) {file= "svm_1_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_13_AARGH		(C_SFX_DEF) {file= "svm_13_aargh_1.wav";		vol = 107;	};
+INSTANCE SVM_13_AARGH_1		(C_SFX_DEF) {file= "svm_13_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_13_AARGH_2		(C_SFX_DEF) {file= "svm_13_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_13_AARGH_3		(C_SFX_DEF) {file= "svm_13_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_13_AARGH_4		(C_SFX_DEF) {file= "svm_13_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_14_AARGH					(C_SFX_DEF) {file= "svm_2_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_14_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_14_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_14_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_14_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_14_AARGH		(C_SFX_DEF) {file= "svm_14_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_14_AARGH_1		(C_SFX_DEF) {file= "svm_14_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_14_AARGH_2		(C_SFX_DEF) {file= "svm_14_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_14_AARGH_3		(C_SFX_DEF) {file= "svm_14_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_14_AARGH_4		(C_SFX_DEF) {file= "svm_14_aargh_3.wav";		vol = 107;	};				
 
-				INSTANCE SVM_15_AARGH					(C_SFX_DEF) {file= "svm_2_aargh_1.wav";				vol = 107;			};				
-				INSTANCE SVM_15_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 107;			};				
-				INSTANCE SVM_15_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_15_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_15_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
+INSTANCE SVM_15_AARGH		(C_SFX_DEF) {file= "svm_15_aargh_1.wav";		vol = 107;	};				
+INSTANCE SVM_15_AARGH_1		(C_SFX_DEF) {file= "svm_15_aargh_2.wav";		vol = 107;	};				
+INSTANCE SVM_15_AARGH_2		(C_SFX_DEF) {file= "svm_15_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_15_AARGH_3		(C_SFX_DEF) {file= "svm_15_aargh_3.wav";		vol = 107;	};				
+INSTANCE SVM_15_AARGH_4		(C_SFX_DEF) {file= "svm_15_aargh_3.wav";		vol = 107;	};				
 
 
 //	DEAD
-				INSTANCE SVM_1_DEAD						(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_2_DEAD						(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_3_DEAD						(C_SFX_DEF) {file= "svm_3_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_4_DEAD						(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_5_DEAD						(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_6_DEAD						(C_SFX_DEF) {file= "svm_3_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_7_DEAD						(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_8_DEAD						(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_9_DEAD						(C_SFX_DEF) {file= "svm_3_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_10_DEAD					(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_11_DEAD					(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_12_DEAD					(C_SFX_DEF) {file= "svm_3_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_13_DEAD					(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_14_DEAD					(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
-				INSTANCE SVM_15_DEAD					(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
+INSTANCE SVM_1_DEAD		(C_SFX_DEF) {file= "svm_1_dead.wav";		vol = 120;	};				
+INSTANCE SVM_2_DEAD		(C_SFX_DEF) {file= "svm_2_dead.wav";		vol = 120;	};				
+INSTANCE SVM_3_DEAD		(C_SFX_DEF) {file= "svm_3_dead.wav";		vol = 120;	};				
+INSTANCE SVM_4_DEAD		(C_SFX_DEF) {file= "svm_4_dead.wav";		vol = 120;	};				
+INSTANCE SVM_5_DEAD		(C_SFX_DEF) {file= "svm_5_dead.wav";		vol = 120;	};				
+INSTANCE SVM_6_DEAD		(C_SFX_DEF) {file= "svm_6_dead.wav";		vol = 120;	};				
+INSTANCE SVM_7_DEAD		(C_SFX_DEF) {file= "svm_7_dead.wav";		vol = 120;	};				
+INSTANCE SVM_8_DEAD		(C_SFX_DEF) {file= "svm_8_dead.wav";		vol = 120;	};				
+INSTANCE SVM_9_DEAD		(C_SFX_DEF) {file= "svm_9_dead.wav";		vol = 120;	};				
+INSTANCE SVM_10_DEAD		(C_SFX_DEF) {file= "svm_10_dead.wav";		vol = 120;	};				
+INSTANCE SVM_11_DEAD		(C_SFX_DEF) {file= "svm_11_dead.wav";		vol = 120;	};				
+INSTANCE SVM_12_DEAD		(C_SFX_DEF) {file= "svm_12_dead.wav";		vol = 120;	};				
+INSTANCE SVM_13_DEAD		(C_SFX_DEF) {file= "svm_13_dead.wav";		vol = 120;	};				
+INSTANCE SVM_14_DEAD		(C_SFX_DEF) {file= "svm_14_dead.wav";		vol = 120;	};				
+INSTANCE SVM_15_DEAD		(C_SFX_DEF) {file= "svm_15_dead.wav";		vol = 120;	};				
 
 //	BERZERK
-				INSTANCE SVM_1_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_2_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_3_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_4_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_5_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_6_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_7_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_8_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_9_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_10_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_11_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_12_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_13_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_14_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
-				INSTANCE SVM_15_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
+INSTANCE SVM_1_BERZERK		(C_SFX_DEF) {file= "svm_1_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_2_BERZERK		(C_SFX_DEF) {file= "svm_2_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_3_BERZERK		(C_SFX_DEF) {file= "svm_3_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_4_BERZERK		(C_SFX_DEF) {file= "svm_4_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_5_BERZERK		(C_SFX_DEF) {file= "svm_5_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_6_BERZERK		(C_SFX_DEF) {file= "svm_6_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_7_BERZERK		(C_SFX_DEF) {file= "svm_7_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_8_BERZERK		(C_SFX_DEF) {file= "svm_8_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_9_BERZERK		(C_SFX_DEF) {file= "svm_9_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_10_BERZERK		(C_SFX_DEF) {file= "svm_10_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_11_BERZERK		(C_SFX_DEF) {file= "svm_11_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_12_BERZERK		(C_SFX_DEF) {file= "svm_12_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_13_BERZERK		(C_SFX_DEF) {file= "svm_13_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_14_BERZERK		(C_SFX_DEF) {file= "svm_14_berzerk.wav";		vol = 110;	};				
+INSTANCE SVM_15_BERZERK		(C_SFX_DEF) {file= "svm_15_berzerk.wav";		vol = 110;	};				
 
 
+////////////////////////////////////////////////////
+//	hinzugefügt, damit einige SVMs auch ohne OutputSVM abgespielt werden können -> Bug 3046
+////////////////////////////////////////////////////
+INSTANCE SVM1Help	(C_SFX_DEF) {file= "svm_1_help.wav";	vol = 110;	};
+INSTANCE SVM2Help	(C_SFX_DEF) {file= "svm_2_help.wav";	vol = 110;	};
+INSTANCE SVM3Help	(C_SFX_DEF) {file= "svm_3_help.wav";	vol = 110;	};
+INSTANCE SVM4Help	(C_SFX_DEF) {file= "svm_4_help.wav";	vol = 110;	};
+INSTANCE SVM5Help	(C_SFX_DEF) {file= "svm_5_help.wav";	vol = 110;	};
+INSTANCE SVM6Help	(C_SFX_DEF) {file= "svm_6_help.wav";	vol = 110;	};
+INSTANCE SVM7Help	(C_SFX_DEF) {file= "svm_7_help.wav";	vol = 110;	};
+INSTANCE SVM8Help	(C_SFX_DEF) {file= "svm_8_help.wav";	vol = 110;	};
+INSTANCE SVM9Help	(C_SFX_DEF) {file= "svm_9_help.wav";	vol = 110;	};
+INSTANCE SVM10Help	(C_SFX_DEF) {file= "svm_10_help.wav";	vol = 110;	};
+INSTANCE SVM11Help	(C_SFX_DEF) {file= "svm_11_help.wav";	vol = 110;	};
+INSTANCE SVM12Help	(C_SFX_DEF) {file= "svm_12_help.wav";	vol = 110;	};
+INSTANCE SVM13Help	(C_SFX_DEF) {file= "svm_13_help.wav";	vol = 110;	};
+INSTANCE SVM14Help	(C_SFX_DEF) {file= "svm_14_help.wav";	vol = 110;	};
+
+INSTANCE SVM1IntruderAlert	(C_SFX_DEF) {file= "svm_1_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM2IntruderAlert	(C_SFX_DEF) {file= "svm_2_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM3IntruderAlert	(C_SFX_DEF) {file= "svm_3_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM4IntruderAlert	(C_SFX_DEF) {file= "svm_4_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM5IntruderAlert	(C_SFX_DEF) {file= "svm_5_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM6IntruderAlert	(C_SFX_DEF) {file= "svm_6_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM7IntruderAlert	(C_SFX_DEF) {file= "svm_7_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM8IntruderAlert	(C_SFX_DEF) {file= "svm_8_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM9IntruderAlert	(C_SFX_DEF) {file= "svm_9_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM10IntruderAlert	(C_SFX_DEF) {file= "svm_10_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM11IntruderAlert	(C_SFX_DEF) {file= "svm_11_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM12IntruderAlert	(C_SFX_DEF) {file= "svm_12_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM13IntruderAlert	(C_SFX_DEF) {file= "svm_13_intruderalert.wav";	vol = 110;	};
+INSTANCE SVM14IntruderAlert	(C_SFX_DEF) {file= "svm_14_intruderalert.wav";	vol = 110;	};
+
+INSTANCE SVM1HeyHeyHey	(C_SFX_DEF) {file= "svm_1_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM2HeyHeyHey	(C_SFX_DEF) {file= "svm_2_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM3HeyHeyHey	(C_SFX_DEF) {file= "svm_3_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM4HeyHeyHey	(C_SFX_DEF) {file= "svm_4_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM5HeyHeyHey	(C_SFX_DEF) {file= "svm_5_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM6HeyHeyHey	(C_SFX_DEF) {file= "svm_6_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM7HeyHeyHey	(C_SFX_DEF) {file= "svm_7_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM8HeyHeyHey	(C_SFX_DEF) {file= "svm_8_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM9HeyHeyHey	(C_SFX_DEF) {file= "svm_9_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM10HeyHeyHey	(C_SFX_DEF) {file= "svm_10_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM11HeyHeyHey	(C_SFX_DEF) {file= "svm_11_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM12HeyHeyHey	(C_SFX_DEF) {file= "svm_12_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM13HeyHeyHey	(C_SFX_DEF) {file= "svm_13_heyheyhey.wav";	vol = 110;	};
+INSTANCE SVM14HeyHeyHey	(C_SFX_DEF) {file= "svm_14_heyheyhey.wav";	vol = 110;	};
+
+INSTANCE SVM1ITakeYourWeapon	(C_SFX_DEF) {file= "svm_1_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM2ITakeYourWeapon	(C_SFX_DEF) {file= "svm_2_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM3ITakeYourWeapon	(C_SFX_DEF) {file= "svm_3_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM4ITakeYourWeapon	(C_SFX_DEF) {file= "svm_4_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM5ITakeYourWeapon	(C_SFX_DEF) {file= "svm_5_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM6ITakeYourWeapon	(C_SFX_DEF) {file= "svm_6_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM7ITakeYourWeapon	(C_SFX_DEF) {file= "svm_7_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM8ITakeYourWeapon	(C_SFX_DEF) {file= "svm_8_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM9ITakeYourWeapon	(C_SFX_DEF) {file= "svm_9_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM10ITakeYourWeapon	(C_SFX_DEF) {file= "svm_10_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM11ITakeYourWeapon	(C_SFX_DEF) {file= "svm_11_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM12ITakeYourWeapon	(C_SFX_DEF) {file= "svm_12_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM13ITakeYourWeapon	(C_SFX_DEF) {file= "svm_13_itakeyourweapon.wav";	vol = 110;	};
+INSTANCE SVM14ITakeYourWeapon	(C_SFX_DEF) {file= "svm_14_itakeyourweapon.wav";	vol = 110;	};
+
+INSTANCE SVM1IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_1_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM2IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_2_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM3IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_3_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM4IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_4_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM5IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_5_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM6IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_6_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM7IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_7_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM8IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_8_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM9IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_9_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM10IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_10_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM11IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_11_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM12IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_12_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM13IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_13_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+INSTANCE SVM14IWillTeachYouRespectForForeignProperty	(C_SFX_DEF) {file= "svm_14_iwillteachyourespectforforeignproperty.wav";	vol = 110;	};
+
+INSTANCE SVM1LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_1_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM2LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_2_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM3LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_3_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM4LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_4_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM5LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_5_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM6LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_6_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM7LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_7_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM8LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_8_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM9LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_9_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM10LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_10_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM11LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_11_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM12LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_12_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM13LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_13_LetsForgetOurLittleFight.wav";	vol = 110;	};
+INSTANCE SVM14LetsForgetOurLittleFight	(C_SFX_DEF) {file= "svm_14_LetsForgetOurLittleFight.wav";	vol = 110;	};
+
+INSTANCE SVM1HandsOff	(C_SFX_DEF) {file= "svm_1_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM2HandsOff	(C_SFX_DEF) {file= "svm_2_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM3HandsOff	(C_SFX_DEF) {file= "svm_3_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM4HandsOff	(C_SFX_DEF) {file= "svm_4_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM5HandsOff	(C_SFX_DEF) {file= "svm_5_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM6HandsOff	(C_SFX_DEF) {file= "svm_6_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM7HandsOff	(C_SFX_DEF) {file= "svm_7_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM8HandsOff	(C_SFX_DEF) {file= "svm_8_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM9HandsOff	(C_SFX_DEF) {file= "svm_9_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM10HandsOff	(C_SFX_DEF) {file= "svm_10_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM11HandsOff	(C_SFX_DEF) {file= "svm_11_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM12HandsOff	(C_SFX_DEF) {file= "svm_12_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM13HandsOff	(C_SFX_DEF) {file= "svm_13_HandsOff.wav";	vol = 110;	};
+INSTANCE SVM14HandsOff	(C_SFX_DEF) {file= "svm_14_HandsOff.wav";	vol = 110;	};
+
+INSTANCE SVM1DirtyThief	(C_SFX_DEF) {file= "svm_1_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM2DirtyThief	(C_SFX_DEF) {file= "svm_2_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM3DirtyThief	(C_SFX_DEF) {file= "svm_3_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM4DirtyThief	(C_SFX_DEF) {file= "svm_4_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM5DirtyThief	(C_SFX_DEF) {file= "svm_5_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM6DirtyThief	(C_SFX_DEF) {file= "svm_6_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM7DirtyThief	(C_SFX_DEF) {file= "svm_7_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM8DirtyThief	(C_SFX_DEF) {file= "svm_8_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM9DirtyThief	(C_SFX_DEF) {file= "svm_9_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM10DirtyThief	(C_SFX_DEF) {file= "svm_10_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM11DirtyThief	(C_SFX_DEF) {file= "svm_11_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM12DirtyThief	(C_SFX_DEF) {file= "svm_12_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM13DirtyThief	(C_SFX_DEF) {file= "svm_13_DirtyThief.wav";	vol = 110;	};
+INSTANCE SVM14DirtyThief	(C_SFX_DEF) {file= "svm_14_DirtyThief.wav";	vol = 110;	};
+
+INSTANCE SVM1Alarm	(C_SFX_DEF) {file= "svm_1_Alarm.wav";	vol = 110;	};
+INSTANCE SVM2Alarm	(C_SFX_DEF) {file= "svm_2_Alarm.wav";	vol = 110;	};
+INSTANCE SVM3Alarm	(C_SFX_DEF) {file= "svm_3_Alarm.wav";	vol = 110;	};
+INSTANCE SVM4Alarm	(C_SFX_DEF) {file= "svm_4_Alarm.wav";	vol = 110;	};
+INSTANCE SVM5Alarm	(C_SFX_DEF) {file= "svm_5_Alarm.wav";	vol = 110;	};
+INSTANCE SVM6Alarm	(C_SFX_DEF) {file= "svm_6_Alarm.wav";	vol = 110;	};
+INSTANCE SVM7Alarm	(C_SFX_DEF) {file= "svm_7_Alarm.wav";	vol = 110;	};
+INSTANCE SVM8Alarm	(C_SFX_DEF) {file= "svm_8_Alarm.wav";	vol = 110;	};
+INSTANCE SVM9Alarm	(C_SFX_DEF) {file= "svm_9_Alarm.wav";	vol = 110;	};
+INSTANCE SVM10Alarm	(C_SFX_DEF) {file= "svm_10_Alarm.wav";	vol = 110;	};
+INSTANCE SVM11Alarm	(C_SFX_DEF) {file= "svm_11_Alarm.wav";	vol = 110;	};
+INSTANCE SVM12Alarm	(C_SFX_DEF) {file= "svm_12_Alarm.wav";	vol = 110;	};
+INSTANCE SVM13Alarm	(C_SFX_DEF) {file= "svm_13_Alarm.wav";	vol = 110;	};
+INSTANCE SVM14Alarm	(C_SFX_DEF) {file= "svm_14_Alarm.wav";	vol = 110;	};
+
+INSTANCE SVM1DieMonster	(C_SFX_DEF) {file= "svm_1_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM2DieMonster	(C_SFX_DEF) {file= "svm_2_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM3DieMonster	(C_SFX_DEF) {file= "svm_3_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM4DieMonster	(C_SFX_DEF) {file= "svm_4_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM5DieMonster	(C_SFX_DEF) {file= "svm_5_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM6DieMonster	(C_SFX_DEF) {file= "svm_6_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM7DieMonster	(C_SFX_DEF) {file= "svm_7_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM8DieMonster	(C_SFX_DEF) {file= "svm_8_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM9DieMonster	(C_SFX_DEF) {file= "svm_9_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM10DieMonster	(C_SFX_DEF) {file= "svm_10_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM11DieMonster	(C_SFX_DEF) {file= "svm_11_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM12DieMonster	(C_SFX_DEF) {file= "svm_12_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM13DieMonster	(C_SFX_DEF) {file= "svm_13_DieMonster.wav";	vol = 110;	};
+INSTANCE SVM14DieMonster	(C_SFX_DEF) {file= "svm_14_DieMonster.wav";	vol = 110;	};
+
+INSTANCE SVM1ShitWhatAMonster	(C_SFX_DEF) {file= "svm_1_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM2ShitWhatAMonster	(C_SFX_DEF) {file= "svm_2_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM3ShitWhatAMonster	(C_SFX_DEF) {file= "svm_3_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM4ShitWhatAMonster	(C_SFX_DEF) {file= "svm_4_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM5ShitWhatAMonster	(C_SFX_DEF) {file= "svm_5_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM6ShitWhatAMonster	(C_SFX_DEF) {file= "svm_6_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM7ShitWhatAMonster	(C_SFX_DEF) {file= "svm_7_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM8ShitWhatAMonster	(C_SFX_DEF) {file= "svm_8_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM9ShitWhatAMonster	(C_SFX_DEF) {file= "svm_9_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM10ShitWhatAMonster	(C_SFX_DEF) {file= "svm_10_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM11ShitWhatAMonster	(C_SFX_DEF) {file= "svm_11_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM12ShitWhatAMonster	(C_SFX_DEF) {file= "svm_12_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM13ShitWhatAMonster	(C_SFX_DEF) {file= "svm_13_ShitWhatAMonster.wav";	vol = 110;	};
+INSTANCE SVM14ShitWhatAMonster	(C_SFX_DEF) {file= "svm_14_ShitWhatAMonster.wav";	vol = 110;	};
+
+INSTANCE SVM1YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_1_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM2YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_2_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM3YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_3_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM4YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_4_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM5YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_5_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM6YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_6_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM7YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_7_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM8YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_8_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM9YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_9_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM10YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_10_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM11YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_11_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM12YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_12_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM13YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_13_YouKilledOneOfUs.wav";	vol = 110;	};
+INSTANCE SVM14YouKilledOneOfUs	(C_SFX_DEF) {file= "svm_14_YouKilledOneOfUs.wav";	vol = 110;	};
+
+INSTANCE SVM1DieMortalEnemy	(C_SFX_DEF) {file= "svm_1_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM2DieMortalEnemy	(C_SFX_DEF) {file= "svm_2_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM3DieMortalEnemy	(C_SFX_DEF) {file= "svm_3_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM4DieMortalEnemy	(C_SFX_DEF) {file= "svm_4_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM5DieMortalEnemy	(C_SFX_DEF) {file= "svm_5_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM6DieMortalEnemy	(C_SFX_DEF) {file= "svm_6_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM7DieMortalEnemy	(C_SFX_DEF) {file= "svm_7_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM8DieMortalEnemy	(C_SFX_DEF) {file= "svm_8_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM9DieMortalEnemy	(C_SFX_DEF) {file= "svm_9_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM10DieMortalEnemy	(C_SFX_DEF) {file= "svm_10_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM11DieMortalEnemy	(C_SFX_DEF) {file= "svm_11_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM12DieMortalEnemy	(C_SFX_DEF) {file= "svm_12_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM13DieMortalEnemy	(C_SFX_DEF) {file= "svm_13_DieMortalEnemy.wav";	vol = 110;	};
+INSTANCE SVM14DieMortalEnemy	(C_SFX_DEF) {file= "svm_14_DieMortalEnemy.wav";	vol = 110;	};
+
+INSTANCE SVM1YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_1_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM2YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_2_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM3YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_3_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM4YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_4_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM5YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_5_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM6YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_6_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM7YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_7_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM8YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_8_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM9YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_9_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM10YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_10_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM11YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_11_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM12YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_12_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM13YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_13_YouStillNotHaveEnough.wav";	vol = 110;	};
+INSTANCE SVM14YouStillNotHaveEnough	(C_SFX_DEF) {file= "svm_14_YouStillNotHaveEnough.wav";	vol = 110;	};
+
+INSTANCE SVM1NowWait	(C_SFX_DEF) {file= "svm_1_NowWait.wav";	vol = 110;	};
+INSTANCE SVM2NowWait	(C_SFX_DEF) {file= "svm_2_NowWait.wav";	vol = 110;	};
+INSTANCE SVM3NowWait	(C_SFX_DEF) {file= "svm_3_NowWait.wav";	vol = 110;	};
+INSTANCE SVM4NowWait	(C_SFX_DEF) {file= "svm_4_NowWait.wav";	vol = 110;	};
+INSTANCE SVM5NowWait	(C_SFX_DEF) {file= "svm_5_NowWait.wav";	vol = 110;	};
+INSTANCE SVM6NowWait	(C_SFX_DEF) {file= "svm_6_NowWait.wav";	vol = 110;	};
+INSTANCE SVM7NowWait	(C_SFX_DEF) {file= "svm_7_NowWait.wav";	vol = 110;	};
+INSTANCE SVM8NowWait	(C_SFX_DEF) {file= "svm_8_NowWait.wav";	vol = 110;	};
+INSTANCE SVM9NowWait	(C_SFX_DEF) {file= "svm_9_NowWait.wav";	vol = 110;	};
+INSTANCE SVM10NowWait	(C_SFX_DEF) {file= "svm_10_NowWait.wav";	vol = 110;	};
+INSTANCE SVM11NowWait	(C_SFX_DEF) {file= "svm_11_NowWait.wav";	vol = 110;	};
+INSTANCE SVM12NowWait	(C_SFX_DEF) {file= "svm_12_NowWait.wav";	vol = 110;	};
+INSTANCE SVM13NowWait	(C_SFX_DEF) {file= "svm_13_NowWait.wav";	vol = 110;	};
+INSTANCE SVM14NowWait	(C_SFX_DEF) {file= "svm_14_NowWait.wav";	vol = 110;	};
+
+INSTANCE SVM1NowWaitIntruder	(C_SFX_DEF) {file= "svm_1_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM2NowWaitIntruder	(C_SFX_DEF) {file= "svm_2_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM3NowWaitIntruder	(C_SFX_DEF) {file= "svm_3_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM4NowWaitIntruder	(C_SFX_DEF) {file= "svm_4_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM5NowWaitIntruder	(C_SFX_DEF) {file= "svm_5_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM6NowWaitIntruder	(C_SFX_DEF) {file= "svm_6_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM7NowWaitIntruder	(C_SFX_DEF) {file= "svm_7_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM8NowWaitIntruder	(C_SFX_DEF) {file= "svm_8_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM9NowWaitIntruder	(C_SFX_DEF) {file= "svm_9_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM10NowWaitIntruder	(C_SFX_DEF) {file= "svm_10_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM11NowWaitIntruder	(C_SFX_DEF) {file= "svm_11_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM12NowWaitIntruder	(C_SFX_DEF) {file= "svm_12_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM13NowWaitIntruder	(C_SFX_DEF) {file= "svm_13_NowWaitIntruder.wav";	vol = 110;	};
+INSTANCE SVM14NowWaitIntruder	(C_SFX_DEF) {file= "svm_14_NowWaitIntruder.wav";	vol = 110;	};
+
+INSTANCE SVM1YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_1_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM2YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_2_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM3YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_3_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM4YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_4_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM5YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_5_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM6YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_6_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM7YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_7_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM8YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_8_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM9YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_9_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM10YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_10_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM11YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_11_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM12YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_12_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM13YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_13_YouAttackedMyCharge.wav";	vol = 110;	};
+INSTANCE SVM14YouAttackedMyCharge	(C_SFX_DEF) {file= "svm_14_YouAttackedMyCharge.wav";	vol = 110;	};

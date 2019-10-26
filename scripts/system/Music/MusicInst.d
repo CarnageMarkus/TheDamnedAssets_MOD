@@ -68,6 +68,12 @@ INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 // ################################################################################################
 // ################################################################################################
 
+// mucke aus g2 + addon
+
+INSTANCE PIR_Day_Std	(C_MUSICTHEME_DEF)	{ file = "PIR_Day_Std.sgt"; };
+INSTANCE PIE_Day_Std	(C_MUSICTHEME_DEF)	{ file = "PIE_DayStd.sgt"; };
+
+
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXX  D E F A U L T  [DEF_]    XXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -352,7 +358,7 @@ INSTANCE PDN_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
 // XXXXXXXX  P I R A T E   B A Y   [PIR_]   XXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-INSTANCE PIR_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
+//INSTANCE PIR_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
 //INSTANCE PIR_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

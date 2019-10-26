@@ -1,7 +1,7 @@
 [BEGINVDF]
 Comment=
-BaseDir=G:\SteamLibrary\steamapps\common\Gothic
-VDFName=G:\SteamLibrary\steamapps\common\Gothic\Data\ModVDF\TheDamned_outlander.mod
+BaseDir=D:\Gothic Games\Gothic
+VDFName=D:\Gothic Games\Gothic\Data\ModVDF\TheDamned_outlander.mod
 [FILES]
 _work\DATA\Anims -r
 _work\DATA\Meshes -r
