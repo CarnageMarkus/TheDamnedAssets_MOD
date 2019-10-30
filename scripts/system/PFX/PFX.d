@@ -49,6 +49,46 @@ INSTANCE zGROUNDFOG (C_PARTICLEFX)
 
 };
 
+INSTANCE zLIGHTCONE (C_PARTICLEFX)
+{
+     ppsvalue = 2;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 2;
+     ppscreateem_s = "LIGHTCONE_PARTICLES";
+     shptype_s = "CIRCLE";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpisvolume = 1;
+     shpdim_s = "15";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 1;
+     dirmode_s = "DIR";
+     dirfor_s = "world";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelev = 90;
+     velavg = 0.00999999978;
+     lsppartavg = 5000;
+     lsppartvar = 500;
+     flygravity_s = "0 0 0";
+     visname_s = "HEAVENLIGHT.TGA";
+     visorientation_s = "VELO3D";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 2;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "30 150";
+     vissizeendscale = 3;
+     visalphafunc_s = "ADD";
+     visalphastart = 200;
+};
 // ******************************************************************************************
 // Spiel PFX 
 // ******************************************************************************************
