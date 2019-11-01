@@ -6052,3 +6052,118 @@ INSTANCE SPELL_MASSDEATH_INVEST(C_PARTICLEFX)
      trltexture_s = "ZPLASMA0.TGA";
      trlwidth = 10.000000000;
 };
+
+
+
+
+//////////////////////////////////////
+//
+//	neue PFXse von Andi aus G2 dNdR
+//	hrhr    geklaut    höhö
+//
+//////////////////////////////////////
+
+
+
+INSTANCE GLIMMER(C_PARTICLEFX)
+{
+     ppsvalue = 100.000000000;
+     ppsislooping = 1;
+     shptype_s = "SPHERE";
+     shpfor_s = "object";
+     shpdistribtype_s = "UNIFORM";
+     shpdistribwalkspeed = 0.039999999;
+     shpisvolume = 1;
+     shpdim_s = "20";
+     shpscalekeys_s = "1 ";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 3.000000000;
+     dirmode_s = "=";
+     dirfor_s = "OBJECT";
+     dirangleheadvar = 360.000000000;
+     lsppartavg = 699.000000000;
+     flygravity_s = "0";
+     flycolldet_b = 0;
+     visname_s = "MFX_LIGHT_SINGLERAY.TGA";
+     vistexisquadpoly = 1;
+     vistexanifps = 10.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "0 0 255";
+     vissizestart_s = "8 8 ";
+     vissizeendscale = 8.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 100.000000000;
+     trlfadespeed = 0.200000003;
+     trltexture_s = "ZPLASMA0.TGA";
+};
+
+
+INSTANCE MAGIC_GLIMMER (C_PARTICLEFX)
+{
+     ppsvalue = 20.000000000;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     shptype_s = "MESH";
+     shpfor_s = "OBJECT";
+     shpoffsetvec_s = "0 0 10";
+     shpisvolume = 1;
+     shpdim_s = "10";
+//     shpmesh_s = "NC_OREHEAP_PFX.3DS";
+     shpmesh_s = "ItAr_Scroll_01.3DS";
+     shpscalefps = 10.000000000;
+     dirmode_s = "DIR";
+     dirfor_s = "object";
+     diranglehead = 20.000000000;
+     dirangleheadvar = 10.000000000;
+     dirangleelev = 150.000000000;
+     dirangleelevvar = 10.000000000;
+     velavg = 0.000010000;
+     velvar = 0.000010000;
+     lsppartavg = 1000.000000000;
+     flygravity_s = "0 0 0";
+     visname_s = "OREHIGHLIGHT2.TGA";
+     visorientation_s = "WORLD";
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "15 15";
+     vissizeendscale = 3.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+     visalphaend = 100.000000000;
+};
+
+INSTANCE MAGIC_GLIMMER2 (C_PARTICLEFX)
+{
+     ppsvalue = 20.000000000;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     shptype_s = "MESH";
+     shpfor_s = "OBJECT";
+     shpoffsetvec_s = "0 0 10";
+     shpisvolume = 1;
+     shpdim_s = "10";
+//     shpmesh_s = "NC_OREHEAP_PFX.3DS";
+     shpmesh_s = "ItAr_Scroll_01.3DS";
+     shpscalefps = 10.000000000;
+     dirmode_s = "DIR";
+     dirfor_s = "object";
+     diranglehead = 20.000000000;
+     dirangleheadvar = 10.000000000;
+     dirangleelev = 150.000000000;
+     dirangleelevvar = 10.000000000;
+     velavg = 0.000010000;
+     velvar = 0.000010000;
+     lsppartavg = 1000.000000000;
+     flygravity_s = "0 0 0";
+     visname_s = "MFX_LIGHT_SINGLERAY3.TGA";
+     visorientation_s = "WORLD";
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "15 15";
+     vissizeendscale = 3.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+     visalphaend = 100.000000000;
+};
