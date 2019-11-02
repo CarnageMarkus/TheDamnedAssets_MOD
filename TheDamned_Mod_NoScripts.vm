@@ -1,7 +1,7 @@
 [BEGINVDF]
-Comment=
-BaseDir=D:\Gothic Games\Gothic
-VDFName=D:\Gothic Games\Gothic\Data\ModVDF\TheDamned_Mod.mod
+Comment=The Damned Mod Files%%NThe Sect Team%%N
+BaseDir=..\..
+VDFName=..\..\Data\ModVDF\TheDamned_Mod.mod
 [FILES]
 _work\DATA\Anims -r
 _work\DATA\Meshes -r
