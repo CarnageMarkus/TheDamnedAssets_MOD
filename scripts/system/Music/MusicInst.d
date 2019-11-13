@@ -41,7 +41,7 @@ INSTANCE jingleLearnTalent(C_MUSICJINGLE_DEF) {	name	    = "E-Positive 1";	trans
 
 INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 {
-	file				= "menu.sgt";
+	file				= "dz.sgt";
 	transType			= TRANSITION_TYPE_NONE;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -10;
@@ -50,7 +50,7 @@ INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 
 INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 {
-	file				= "menu.sgt";
+	file				= "dz.sgt";
 	transType			= TRANSITION_TYPE_NONE;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
