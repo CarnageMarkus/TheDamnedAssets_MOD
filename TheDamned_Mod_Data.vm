@@ -5,7 +5,6 @@ VDFName=..\..\Data\ModVDF\TheDamned_Mod.mod
 [FILES]
 _work\DATA\Anims -r
 _work\DATA\Meshes\_Compiled -r
-_Work\Data\Textures\Desktop -r
 _work\DATA\Textures\_compiled\*-C.TEX -r
 _work\DATA\WORLDS\NIGHTMARE.ZEN -r
 _work\DATA\WORLDS\WORLD.ZEN -r
