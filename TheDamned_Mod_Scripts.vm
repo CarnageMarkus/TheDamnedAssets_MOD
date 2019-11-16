@@ -1,0 +1,12 @@
+[BEGINVDF]
+Comment=The Damned Mod Scripts%%NThe Sect Team%%N
+BaseDir=..\..
+VDFName=..\..\Data\ModVDF\TheDamned_Scripts.mod
+[FILES]
+_work\DATA\scripts\_compiled\* -r
+_work\DATA\scripts\Content\Cutscene\OU.BIN -r
+_work\DATA\scripts\Content\Cutscene\OU.CSL -r
+_work\DATA\scripts\Content\Gothic.src -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]
