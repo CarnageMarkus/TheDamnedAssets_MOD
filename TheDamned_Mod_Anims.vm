@@ -1,0 +1,9 @@
+[BEGINVDF]
+Comment=The Damned Mod Files%%NThe Sect Team%%N
+BaseDir=..\..\..
+VDFName=..\..\..\Data\ModVDF\TheDamned_Anims.mod
+[FILES]
+_work\DATA\Anims -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]

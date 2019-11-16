@@ -1,0 +1,9 @@
+[BEGINVDF]
+Comment=The Damned Mod Files%%NThe Sect Team%%N
+BaseDir=..\..\..
+VDFName=..\..\..\Data\ModVDF\TheDamned_Textures.mod
+[FILES]
+_work\DATA\Textures\_compiled\*-C.TEX -r
+[EXCLUDE]
+[INCLUDE]
+[ENDVDF]

@@ -1,11 +1,8 @@
 [BEGINVDF]
 Comment=The Damned Mod Files%%NThe Sect Team%%N
-BaseDir=..\..
-VDFName=..\..\Data\ModVDF\TheDamned_Mod.mod
+BaseDir=..\..\..
+VDFName=..\..\..\Data\ModVDF\TheDamned_Worlds.mod
 [FILES]
-_work\DATA\Anims -r
-_work\DATA\Meshes\_Compiled -r
-_work\DATA\Textures\_compiled\*-C.TEX -r
 _work\DATA\WORLDS\NIGHTMARE.ZEN -r
 _work\DATA\WORLDS\WORLD.ZEN -r
 [EXCLUDE]

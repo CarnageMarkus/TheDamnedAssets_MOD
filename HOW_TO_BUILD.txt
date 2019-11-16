@@ -1,0 +1,5 @@
+1. _VDFS/GothicVDFS.exe 
+2. Open one of the vm scripts
+3. Root dir and Save file are autmatically set up - Don't change just build
+4. When everything is build, start MakeBuild.bat
+5. Gothic/_Build contains all needed files - put into zip and upload

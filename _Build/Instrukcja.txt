@@ -1,0 +1,18 @@
+Hej!
+Dziêkujemy za pobranie modyfikacji Potêpieni. 
+Mamy nadziejê, ¿e bêdziesz siê dobrze bawiæ.
+
+
+[INSTRUKCJA INSTALACJI]
+1.Do uruchomienia modyfikacji potrzebujesz oryginalnej kopii gry Gothic I.
+2.Zawartoœæ archiwum wypakowaæ do katalogu z gr¹ Gothic.
+3.Do uruchomienia modyfikacji niezbêdny jest GothicPlayer. Mo¿na go pobraæ z tego linku: https://www.worldofgothic.de/dl/download_34.htm 
+Nale¿y go zainstalowaæ w pierwszej kolejnoœci tu¿ po zgraniu plików modyfikacji.
+4. Ostatnim krokiem jest zainstalowanie Gothic System Pack, który poprawi doznania z gry.
+Mo¿na go pobraæ na oficjalnym forum World of Gothic (najnowsz¹ wersjê). 
+UWAGA! Nowe wersje SP mog¹ nie byæ kompatybilne z nasz¹ modyfikacj¹. Potêpieni zostali przetestowani na SP w wersji 1.7.
+W razie wygaœciêcia linku lub innych problemów, wersjê 1.7 mo¿na pobraæ st¹d: https://mega.nz/#!1TZUDKaI!rqyghI91L34rMcC1Ikhbo3CbGsVrVJBFbFFP3qsVH9E
+
+Gdy wszystko ju¿ gotowe, mo¿na uruchomiæ modyfikacjê! ¯yczymy mi³ej gry.
+
+theSect team
