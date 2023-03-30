@@ -24,7 +24,7 @@ INSTANCE MENU_MAIN(C_MENU_DEF)
 	dimx		= 8192;
 	dimy		= 8192;
 	
-	defaultOutGame	= 3;	// NEWGAME
+	defaultOutGame	= 1;	// NEWGAME
 	defaultInGame	= 5;	// SAVEGAME
 	
 	flags = MENU_SHOW_INFO | MENU_EXCLUSIVE;
